@@ -12381,7 +12381,7 @@ readers do not read off random characters that represent icons */
   padding-bottom: 1rem; }
   @media (min-width: 768px) {
     .td-sidebar {
-      padding-top: 4rem;
+      padding-top: 7rem;
       background-color: rgba(255, 255, 255, 0.03);
       padding-right: 1rem;
       border-right: 1px solid #dee2e6; } }
@@ -12411,7 +12411,7 @@ readers do not read off random characters that represent icons */
 .td-toc {
   border-left: 1px solid #dee2e6;
   order: 2;
-  padding-top: 0.75rem;
+  padding-top: 7rem;
   padding-bottom: 1.5rem;
   vertical-align: top; }
   @supports (position: sticky) {
@@ -12558,7 +12558,7 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 768px) {
   .td-default main section:first-of-type {
-    padding-top: 8rem; } }
+    padding-top: 9.6rem; } }
 
 .td-main {
   flex-grow: 1; }
@@ -12566,7 +12566,7 @@ readers do not read off random characters that represent icons */
     padding-bottom: 2rem; }
     @media (min-width: 768px) {
       .td-main main {
-        padding-top: 5.5rem; } }
+        padding-top: 7.5rem; } }
 
 .td-cover-block--height-min {
   min-height: 300px; }
