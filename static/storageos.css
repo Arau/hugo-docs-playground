@@ -2122,7 +2122,7 @@ h3 {
 h4,
 h5,
 h6 {
-  font-size: 1em;
+  font-size: 1.15rem;
 }
 
 h4 {
@@ -3271,7 +3271,7 @@ pre span {
 code {
   padding: 3px 7px;
   font-size: 90%;
-  background-color: rgba(12, 81, 118, 0.1);
+  /*background-color: rgba(12, 81, 118, 0.1);*/
   border-radius: 2px;
 }
 
@@ -3295,9 +3295,9 @@ pre {
   word-break: normal !important;
   word-wrap: break-word;
   background-color: #f5f5f5;
-  border: 1px solid #ccc;
+  /*border: 1px solid #ccc;*/
   border-radius: 4px;
-  overflow-x: scroll !important;
+  /*overflow-x: scroll !important;*/
 }
 
 redoc[spec-url] .search-input-wrap {
