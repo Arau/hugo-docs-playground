@@ -25,11 +25,11 @@
  Set --feature-gates MountPropagation=true in the kube-apiserver and kube-controller-manager deployments, usually found in the master nodes under /etc/kubernetes/manifests. Set KUBELET_EXTRA_ARGS=--feature-gates=MountPropagation=true in the kubelet service config. For systemd, this usually is located in /etc/systemd/system/.  If the kubelets run as containers, you also need to share the StorageOS data directory into each of the kubelets by adding --volume=/var/lib/storageos:/var/lib/storageos:rshared to each of the kubelets." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/platforms/openshift/install/3.8/" />
-
+<meta property="article:modified_time" content="2020-02-06T15:46:42+00:00" />
 <meta itemprop="name" content="Installing on OpenShift 3.8">
 <meta itemprop="description" content="StorageOS requires mount propagation in order to present devices as volumes to containers. In OpenShift 3.8 this feature is in alpha, so needs to be explicity enabled.
  Set --feature-gates MountPropagation=true in the kube-apiserver and kube-controller-manager deployments, usually found in the master nodes under /etc/kubernetes/manifests. Set KUBELET_EXTRA_ARGS=--feature-gates=MountPropagation=true in the kubelet service config. For systemd, this usually is located in /etc/systemd/system/.  If the kubelets run as containers, you also need to share the StorageOS data directory into each of the kubelets by adding --volume=/var/lib/storageos:/var/lib/storageos:rshared to each of the kubelets.">
-
+<meta itemprop="dateModified" content="2020-02-06T15:46:42&#43;00:00" />
 <meta itemprop="wordCount" content="207">
 
 
@@ -1586,7 +1586,7 @@ to mount a StorageOS volume in a Pod.</p>
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified January 1, 0001
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 6, 2020: <a  href="https://github.com/google/docsy-example/commit/131b65ea3e2e4586868a5582651d9be4cae0c528">StorageOS Docs init (131b65e)</a>
 </div>
 </div>
 

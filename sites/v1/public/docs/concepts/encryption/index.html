@@ -27,13 +27,13 @@ Keys and Initialisation vectors are generated using the crypto/rand package.
    Key Size Usage     Volume 512 bits random data Used by XTS-AES to encrypt and decrypt disk blocks   Namespace 256 bits random data Used to encrypt Volume keys   Initialisation Vector 256 bits random data Used as &lsquo;salt&rsquo; when encrypting volume keys with namespace keys    The components required to derive the encryption key are stored in a Kubernetes secret." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/concepts/encryption/" />
-
+<meta property="article:modified_time" content="2020-02-06T15:46:42+00:00" />
 <meta itemprop="name" content="Encryption">
 <meta itemprop="description" content="Encryption is enabled on a per volume basis using the storageos.com/encryption label (for more information see Encrypted Volumes).
 StorageOS encrypts volumes on disk using AES-256 in XTS-AES mode with 512 bit keys as recommended by NIST, with encryption keys being derived using HKDF.
 Keys and Initialisation vectors are generated using the crypto/rand package.
    Key Size Usage     Volume 512 bits random data Used by XTS-AES to encrypt and decrypt disk blocks   Namespace 256 bits random data Used to encrypt Volume keys   Initialisation Vector 256 bits random data Used as &lsquo;salt&rsquo; when encrypting volume keys with namespace keys    The components required to derive the encryption key are stored in a Kubernetes secret.">
-
+<meta itemprop="dateModified" content="2020-02-06T15:46:42&#43;00:00" />
 <meta itemprop="wordCount" content="433">
 
 
@@ -1609,7 +1609,7 @@ regarding backing up StorageOS secrets.</p>
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified January 1, 0001
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 6, 2020: <a  href="https://github.com/google/docsy-example/commit/131b65ea3e2e4586868a5582651d9be4cae0c528">StorageOS Docs init (131b65e)</a>
 </div>
 </div>
 

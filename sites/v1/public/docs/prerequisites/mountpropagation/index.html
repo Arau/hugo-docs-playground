@@ -26,12 +26,12 @@ Certain versions of docker ship with a systemd manifest with MountFlags set to &
 mkdir -p /etc/systemd/system/docker.service.d/ cat &lt;&lt;EOF &gt; /etc/systemd/system/docker.service.d/mount_propagation_flags.conf [Service] MountFlags=shared EOF # systemctl daemon-reload # systemctl restart docker.service To confirm behaviour, the following command should run without error" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/docs/prerequisites/mountpropagation/" />
-
+<meta property="article:modified_time" content="2020-02-06T15:46:42+00:00" />
 <meta itemprop="name" content="Mount Propagation">
 <meta itemprop="description" content="StorageOS requires mount propagation enabled to present devices as volumes for containers (see linux kernel documentation here).
 Certain versions of docker ship with a systemd manifest with MountFlags set to &lsquo;slave&rsquo;, thus preventing StorageOS from working. This can be removed or set to &lsquo;shared&rsquo; with a systemd drop in:
 mkdir -p /etc/systemd/system/docker.service.d/ cat &lt;&lt;EOF &gt; /etc/systemd/system/docker.service.d/mount_propagation_flags.conf [Service] MountFlags=shared EOF # systemctl daemon-reload # systemctl restart docker.service To confirm behaviour, the following command should run without error">
-
+<meta itemprop="dateModified" content="2020-02-06T15:46:42&#43;00:00" />
 <meta itemprop="wordCount" content="169">
 
 
@@ -1564,7 +1564,7 @@ check and enable mount propagation where appropriate.</p>
 		<br />
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified January 1, 0001
+	<div class="text-muted mt-5 pt-3 border-top">Last modified February 6, 2020: <a  href="https://github.com/google/docsy-example/commit/131b65ea3e2e4586868a5582651d9be4cae0c528">StorageOS Docs init (131b65e)</a>
 </div>
 </div>
 
