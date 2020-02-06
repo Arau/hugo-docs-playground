@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/docs/platforms/openshift/install/4.2/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/install/1.17/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/openshift/install/4.1/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/install/1.16/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/openshift/install/3.11/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/install/1.15/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/openshift/install/3.10/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/install/1.14/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/openshift/install/3.9/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/install/1.13/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/openshift/install/3.8/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/install/1.12/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/openshift/install/3.7/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cluster-operator/install/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/aws-eks/install/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/azure-aks/install/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/dockeree/install/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/install/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/openshift/install/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/rancher/install/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/introduction/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/rancher/install/rancher-catalog/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/rancher/install/rancher-advanced/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/prerequisites/systemconfiguration/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/openshift/volumeguide/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/rancher/volumeguide/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/aws-eks/bestpractices/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/openshift/bestpractices/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cluster-operator/configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/prerequisites/firewalls/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/azure-aks/volumeguide/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/dockeree/volumeguide/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/azure-aks/bestpractices/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/dockeree/bestpractices/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/rancher/bestpractices/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cluster-operator/examples/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/prerequisites/mountpropagation/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/aws-eks/volumeguide/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/volumeguide/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/bestpractices/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cluster-operator/upgrade/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/openshift/troubleshoot/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/rancher/troubleshoot/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/concepts/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/prerequisites/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/usecases/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/support/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/self-eval/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/updates/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/index.json</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/api/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/concepts/architecture/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/aws-eks/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/azure-aks/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/usecases/backups/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/examples/cassandra/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/usecases/cassandra/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cli/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cli/cluster/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/clusterdiscovery/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cluster-operator/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/concepts/clusters/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/concepts/compression/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/contributing/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/decommission-nodes/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/dockeree/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/usecases/elasticsearch/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/concepts/encryption/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/encrypted-volumes/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/envvars/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/external-etcd/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/concepts/fencing/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/fencing/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/gui/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/health/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/managing-host-storage/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/init-container/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/examples/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/openshift/troubleshoot/install/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/rancher/troubleshoot/install/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/usecases/jenkins/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/usecases/kafka/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/troubleshoot/install/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/troubleshoot/volumes/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/usecases/kubevirt/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/labels/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cli/licence/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/licensing/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cli/login/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cli/logs/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/maintenance/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/concepts/metrics/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/monitoring/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/examples/mssql/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/usecases/mssql/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/external-etcd/etcd-tls/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/examples/mysql/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/usecases/mysql/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/concepts/namespaces/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/namespaces/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cli/namespace/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/usecases/nginx/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/concepts/nodes/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cli/node/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/open_source_attribution/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/openshift/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/concepts/policies/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/policies/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cli/policy/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/overcommitment/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/concepts/pools/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cli/pool/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/examples/postgres/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/usecases/postgres/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/prometheus/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/monitoring/prometheus-setup/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/introduction/quickstart/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/rancher/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/examples/redis/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/usecases/redis/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/release_notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/concepts/replication/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/concepts/rules/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/rules/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cli/rule/</loc>
+  </url>
+  
+  <url>
+    <loc>/search/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/telemetry/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/filesystems/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/introduction/platforms/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/kubernetes/troubleshoot/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/troubleshooting/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/introduction/tutorials/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/upgrades/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/operations/users/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cli/user/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/openshift/troubleshoot/volumes/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/platforms/rancher/troubleshoot/volumes/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/concepts/volumes/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/reference/cli/volume/</loc>
+  </url>
+  
+  <url>
+    <loc>/docs/usecases/zookeeper/</loc>
+  </url>
+  
+</urlset>
