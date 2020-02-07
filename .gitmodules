@@ -1,0 +1,12 @@
+[submodule "sites/v1/public"]
+	path = sites/v1/public
+	url = git@github.com:Arau/arau.github.io.git
+	branch = master
+[submodule "v1"]
+	path = sites/v1/public
+	url = git@github.com:Arau/arau.github.io.git
+	branch = master
+[submodule "public"]
+	path = sites/stable/public
+	url = https://github.com/arau/arau.github.io.git
+	branch = master
