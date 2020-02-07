@@ -1,6 +1,6 @@
 ---
 linkTitle: Use Cases
-title: Install applications on Kubernetes with StorageOS
+title: "Use Cases: Install applications on Kubernetes with StorageOS"
 weight: 500
 description: >
   Examples on how to deploy stateful applications into a Kubernetes cluster using StorageOS to persist data.
