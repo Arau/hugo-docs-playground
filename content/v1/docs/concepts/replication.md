@@ -51,4 +51,4 @@ While replica count and replication failure mode are controllable on a
 per-volume basis, some environments may prefer to set appropriate policies to
 ensure a desired level of data protection. This can be accomplished on a
 per-namespace basis  using
-[Rules]({%link _docs/operations/rules.md %}).
+[Rules]({{< ref "docs/operations/rules.md" >}}).

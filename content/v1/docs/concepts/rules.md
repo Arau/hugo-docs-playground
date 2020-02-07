@@ -15,5 +15,5 @@ An example business requirement might be that all production volumes are
 replicated twice. This would be defined with a selector `env==prod`, and the
 action would be to add the label `storageos.com/replicas=2`.
 
-Rules can be created with the CLI or Web UI. See [Rules]({%link
-_docs/operations/rules.md %}) for details.
+Rules can be created with the CLI or Web UI. See [Rules]({{< ref
+"docs/operations/rules.md" >}}) for details.

@@ -50,13 +50,13 @@ compression defined on the volume.
 
 
 To ensure deterministic performance, individual StorageOS volumes must fit on a single
-node. In situations where [overcommit]({% link _docs/operations/overcommitment.md
-%}) is applied, a scaling factor is applied when determining whether to place a
+node. In situations where [overcommit]({{< ref "docs/operations/overcommitment.md"
+>}}) is applied, a scaling factor is applied when determining whether to place a
 volume on a node.
 
 
 We present various metrics regarding StorageOS volumes, including used capacity
 and throughput, via our [Prometheus Endpoint]({% link
-_docs/reference/prometheus.md %}).
+"docs/reference/prometheus.md" >}}).
 
 

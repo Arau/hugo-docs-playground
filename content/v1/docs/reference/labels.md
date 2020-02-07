@@ -5,7 +5,7 @@ title: StorageOS Feature labels
 
 
 Feature labels are a powerful and flexible way to control storage features,
-especially when combined with [rules]({% link _docs/reference/cli/rule.md %}).
+especially when combined with [rules]({{< ref "docs/reference/cli/rule.md" >}}).
 
 Labels can be applied to various StorageOS artefacts. Applying specific feature
 labels triggers compression, replication and other storage features. No feature
@@ -15,7 +15,7 @@ labels are present by default.
 
 Nodes do not have any feature labels present by default.  When StorageOS is run
 within Kubernetes with the [Cluster Operator]({% link
-_docs/reference/cluster-operator/index.md %}), any node labels set on Kubernetes
+"docs/reference/cluster-operator/_index.md" >}}), any node labels set on Kubernetes
 nodes are available within StorageOS.  Node labels may also be set with the CLI
 or UI.
 
@@ -51,7 +51,7 @@ Pools do not have any labels present by default.
 
 | Feature             | Label                               | Values                               | Description                                                                                                                                                                                                                        |
 | :------------------ | :---------------------------------- | :----------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------                                                                                     |
-| Overcommitment      | `storageos.com/overcommit`          | integers [+]                         | Sets the percentage of overcommitment allowed for the pool (see [here]({%link _docs/operations/overcommitment.md %})).                                                                                                                                                                        |
+| Overcommitment      | `storageos.com/overcommit`          | integers [+]                         | Sets the percentage of overcommitment allowed for the pool (see [here]({{< ref "docs/operations/overcommitment.md" >}})).                                                                                                                                                                        |
 
 To add overcommit labels to a pool:
 
@@ -86,7 +86,7 @@ means that all volumes created with the specific StorageClass will have
 StorageOS volume labels applied to them.
 
 For example the StorageClass below will create `ext4` formatted volumes with a
-single StorageOS replica, in the `default` [pool]({%link _docs/concepts/pools.md %}).
+single StorageOS replica, in the `default` [pool]({{< ref "docs/concepts/pools.md" >}}).
 
 ```yaml
 apiVersion: storage.k8s.io/v1

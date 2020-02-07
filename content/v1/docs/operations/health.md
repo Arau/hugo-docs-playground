@@ -6,7 +6,7 @@ linkTitle: Health
 
 Various tools are available for checking on the status of a cluster.
 
-The [StorageOS CLI]({%link _docs/reference/cli/index.md %}) displays the status
+The [StorageOS CLI]({{< ref "docs/reference/cli/_index.md" >}}) displays the status
 of the components on nodes in the cluster.
 
 ```bash

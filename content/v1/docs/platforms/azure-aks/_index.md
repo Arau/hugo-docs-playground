@@ -9,8 +9,8 @@ platform-pretty: AKS
 This section of documentation covers the use of the managed Kubernetes Azure
 service [AKS](https://azure.microsoft.com/en-gb/services/kubernetes-service/).
 For information on the installation of StorageOS with vanilla Kubernetes in Azure
-VMs, please refer to the [Kubernetes standard installation]({%link
-_docs/platforms/kubernetes/install/index.md %}) procedure.
+VMs, please refer to the [Kubernetes standard installation]({{< ref
+"docs/platforms/kubernetes/install/_index.md" >}}) procedure.
 
 ## AKS and StorageOS
 

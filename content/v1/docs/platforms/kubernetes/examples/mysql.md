@@ -9,7 +9,7 @@ web-based applications including WordPress.
 
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes
 cluster. [See our guide on how to install StorageOS on Kubernetes for more
-information]({% link _docs/platforms/kubernetes/install/index.md %})
+information]({{< ref "docs/platforms/kubernetes/install/_index.md" >}})
 
 ## Deploying MySQL on Kubernetes
 

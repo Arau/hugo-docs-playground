@@ -8,7 +8,7 @@ Redis is a popular networked, in-memory, key-value data store with optional dura
 
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes
 cluster. [See our guide on how to install StorageOS on Kubernetes for more
-information]({% link _docs/platforms/kubernetes/install/index.md %}).
+information]({{< ref "docs/platforms/kubernetes/install/_index.md" >}}).
 
 ## Deploying Redis on Kubernetes
 

@@ -8,7 +8,7 @@ StorageOS. The container also manages configuration changes required when
 upgrading StorageOS versions.
 
 The container belongs to the DaemonSet that the [StorageOS Cluster
-Operator]({%link _docs/reference/cluster-operator/index.md %}) starts when a
+Operator]({{< ref "docs/reference/cluster-operator/_index.md" >}}) starts when a
 `StorageOSCluster` resource is created. The `storageos-init` container is
 executed as an
 [initContainer](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)

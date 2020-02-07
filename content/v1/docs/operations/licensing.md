@@ -58,8 +58,8 @@ Then copy the licence key to clipboard and apply the licence by the CLI command:
 $ echo PASTE-THE-LICENCE-KEY-HERE | storageos licence apply --stdin
 ```
 
-Read the [licence CLI command reference]({% link _docs/reference/cli/licence.md
-%}) for further information.
+Read the [licence CLI command reference]({{< ref
+"docs/reference/cli/licence.md" >}}) for further information.
 
 ## Obtaining an Enterprise licence
 

@@ -107,7 +107,7 @@ $ curl -X "PUT" "http://127.0.0.1:5705/v1/telemetry"        \
 ```
 
 #### StorageOS Cluster Spec
-Disable telemetry explicitly through the configurable [spec parameters]({% link _docs/reference/cluster-operator/configuration.md %}) of the StorageOSCluster custom resource.
+Disable telemetry explicitly through the configurable [spec parameters]({{< ref "docs/reference/cluster-operator/configuration.md" >}}) of the StorageOSCluster custom resource.
 
 #### Environment Variables
 
@@ -120,4 +120,4 @@ DISABLE_ERROR_REPORTING # Disable sentry.io crash reports
 ```
 
 You can find more information about StorageOS environment variables
-[here]({%link _docs/reference/envvars.md %}).
+[here]({{< ref "docs/reference/envvars.md" >}}).

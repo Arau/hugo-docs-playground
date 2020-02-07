@@ -5,7 +5,7 @@ linkTitle: Upgrade StorageOS
 
 
 > Before upgrading, check the 
-> [release notes]({%link _docs/reference/release_notes.md %}) to confirm
+> [release notes]({{< ref "docs/reference/release_notes.md" >}}) to confirm
 > whether there is a safe upgrade path between versions.
 
 StorageOS version upgrades must be planned and executed taking into consideration
@@ -23,7 +23,7 @@ the volumes from the previous version are available.
 > More upgrade procedures will be released that will automate the main part of
 > the process and fulfil use cases not covered currently.
 
-> The [StorageOS CLI]({%link _docs/reference/cli/index.md %}) is required to perform an upgrade.
+> The [StorageOS CLI]({{< ref "docs/reference/cli/_index.md" >}}) is required to perform an upgrade.
 
 ## Option 1. Full stop of the cluster
 

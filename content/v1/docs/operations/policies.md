@@ -16,9 +16,9 @@ be applied to the default namespace.
 ## Create a policy
 
 To start creating policies, at least one custom namespace and user are required. To see
-more information on how to create namespaces see our [Namespace guide]({%link
-_docs/operations/namespaces.md %}), for users see our [Users CLI reference]({%link
-_docs/reference/cli/user.md %}). 
+more information on how to create namespaces see our [Namespace guide]({{< ref
+"docs/operations/namespaces.md" >}}), for users see our [Users CLI reference]({{< ref
+"docs/reference/cli/user.md" >}}). 
 
 ```bash 
 $ storageos namespace create testing --description quality-assurance

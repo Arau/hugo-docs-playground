@@ -3,8 +3,8 @@ title: User Management
 ---
 
 A StorageOS cluster admin can create users and restrict their access rights to
-StorageOS [namespaces]({%link _docs/operations/namespaces.md %}) using
-[policies]({%link _docs/operations/policies.md %}).
+StorageOS [namespaces]({{< ref "docs/operations/namespaces.md" >}}) using
+[policies]({{< ref "docs/operations/policies.md" >}}).
 
 >Note: Users are created with access to the default namespace. This access is
 >only revoked when a policy is created for the user or their group. 

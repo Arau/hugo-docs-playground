@@ -33,7 +33,7 @@ StorageOS uses the storage capacity from the nodes where it is installed to
 provide thinly-provisioned volumes. That space is selected from the mount point
 of `/var/lib/storageos/data` on the host. It is recommended that disk devices
 are used exclusively for StorageOS, as described in [Managing Host Storage
-]({%link _docs/operations/managing-host-storage.md %})
+]({{< ref "docs/operations/managing-host-storage.md" >}})
 
 Any container may mount a StorageOS virtual volume from any node, regardless of
 whether the container and volume are colocated on the same node or the volume is

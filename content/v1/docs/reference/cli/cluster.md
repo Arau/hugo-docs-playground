@@ -79,8 +79,8 @@ storageos-nodes1  storageos-nodes3.serf      10.0.12.253:5711  1.075519ms  OK
 
 ### `storageos cluster create`
 
-To create a cluster token for [cluster discovery]({%link
-_docs/reference/clusterdiscovery.md %}):
+To create a cluster token for [cluster discovery]({{< ref
+"docs/reference/clusterdiscovery.md" >}}):
 
 ```bash
 $ storageos cluster create

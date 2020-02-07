@@ -9,7 +9,7 @@ description: >
 ## OS
 
 - Linux X86_64
-- Kernels satisfying our module [prerequisites]({% link _docs/prerequisites/systemconfiguration.md %})
+- Kernels satisfying our module [prerequisites]({{< ref "docs/prerequisites/systemconfiguration.md" >}})
 - 3.x kernels have a limitation of 256 active volumes per node
 - 4.x kernels have a limitation of 4096 active volumes per node
 - We are distribution agnostic as long as our prerequisites are met

@@ -10,8 +10,8 @@ platform-pretty: EKS
 This section of documentation covers the use of the managed Kubernetes AWS
 service [EKS](https://aws.amazon.com/eks/). For information on the installation
 of StorageOS with vanilla Kubernetes in AWS VMs, please refer to the
-[Kubernetes standard installation]({%link
-_docs/platforms/kubernetes/install/index.md %}) procedure.
+[Kubernetes standard installation]({{< ref
+"docs/platforms/kubernetes/install/_index.md" >}}) procedure.
 
 ## EKS and StorageOS
 

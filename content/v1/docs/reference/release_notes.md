@@ -15,7 +15,7 @@ The latest CLI release is `{{ site.latest_cli_version }}`, available from
 
 # Upgrading
 
-See [upgrades]({%link _docs/operations/upgrades.md %}) for upgrade strategies.
+See [upgrades]({{< ref "docs/operations/upgrades.md" >}}) for upgrade strategies.
 
 ## 1.4.0 - Released 06/09/2019
 
@@ -24,7 +24,7 @@ improved key locality and thus an increase in IO performance.
 
 *IMPORTANT:* Due to the nature of this change, the upgrade process includes an
 automated conversion process. If upgrading from `1.3.0` or below, please ensure
-you follow the [upgrade instructions]({%link _docs/operations/upgrades.md %}).
+you follow the [upgrade instructions]({{< ref "docs/operations/upgrades.md" >}}).
 If the upgrade process is not followed, version `1.4.0` will refuse to start,
 but you may restart using the previous version. Once the upgrade process has
 been completed it is not possible to revert to an earlier version.
@@ -159,25 +159,25 @@ improvements, along with 3 new features:
   concurrently, the fencing option gives the ability to override the default
   Kubernetes behaviour.
 
-  See [fencing]({%link _docs/concepts/fencing.md %}) for more information.
+  See [fencing]({{< ref "docs/concepts/fencing.md" >}}) for more information.
 
 - Volume Encryption can now be enabled by setting the
   `storageos.com/encryption=true` label on a volume.  When enabled, data will be
   encrypted prior to being persisted on disk.
 
-  See [encrypted volumes]({%link _docs/concepts/encryption.md %}) for more
+  See [encrypted volumes]({{< ref "docs/concepts/encryption.md" >}}) for more
   information.
 
 - Mutual TLS is now supported on external etcd KV backends.
 
-  See [etcd TLS]({%link _docs/operations/external-etcd/etcd-tls.md %}) for more
+  See [etcd TLS]({{< ref "docs/operations/external-etcd/etcd-tls.md" >}}) for more
   information.
 
 - When deployed using the [StorageOS Cluster
   Operator](https://github.com/storageos/cluster-operator), node labels from
   Kubernetes are visible within StorageOS and available for use in rules.  This
   is particularly useful to mark specific nodes as compute-only.  See
-  [labels]({%link _docs/reference/labels.md %}) for more information.
+  [labels]({{< ref "docs/reference/labels.md" >}}) for more information.
 
 ### Improved
 
@@ -447,7 +447,7 @@ improvements, many to help with running on low-memory or heavily loaded servers.
 ### Improvements
 
 - Cache allocation has been adjusted for lower memory systems.  Allocation sizes
-  are described in [architecture]({%link _docs/concepts/architecture.md %}).
+  are described in [architecture]({{< ref "docs/concepts/architecture.md" >}}).
   The cache size will never be set to more than 1/3rd of free memory.
 - Increased the maximum number of replicas from 4 to 5.
 - Increased the timeout for the device presentation shutdown to 9 seconds before
@@ -540,7 +540,7 @@ general improvements.
 - Offline nodes can now be removed from management either by using the CLI `node
   delete` command, or in the UI. This is only available when external etcd is
   used as the KV store.  See
-  [decommissioning nodes]({%link _docs/operations/decommission-nodes.md %})
+  [decommissioning nodes]({{< ref "docs/operations/decommission-nodes.md" >}})
   for more information.
 - Nodes can now be placed into "Maintenance mode" to disable volume recovery on
   the node while it is offline for maintenance. This allows nodes to be
@@ -563,7 +563,7 @@ general improvements.
   the latest StorageOS version and log if a new version is available.  The UI
   will also notify administrators.  This check can be disabled by setting
   `DISABLE_TELEMETRY=true`.  For more information see
-  [telemetry]({%link _docs/reference/telemetry.md %}).
+  [telemetry]({{< ref "docs/reference/telemetry.md" >}}).
 - Since data scrub operations can be intensive, we now limit to 5 concurrent
   volume scrubs.  This does not affect the number of volumes that may be deleted
   in a batch as the scrubs occur asyncronously.  Volumes will remain in
@@ -932,7 +932,7 @@ maintainability.
   where it wasn't.  Using the new volume presentation improves performance on
   the RHEL platform where NBD is not available.  This feature is available for
   all major distributions and is widely used.  For more information, see
-  [system configuration]({%link _docs/prerequisites/systemconfiguration.md %})
+  [system configuration]({{< ref "docs/prerequisites/systemconfiguration.md" >}})
 - Internally, the StorageOS scheduler has switched to using level-based state
   handling and the gRPC protocol.  This allows the scheduler to make assertions
   about the current state, rather than relying on events that can be missed.
@@ -1045,13 +1045,13 @@ in order to reduce pain later.
   (`5705`).  To access, point your web browser to http://ADVERTISE_IP:5705.
   where ADVERTISE_IP is the public ip address of a StorageOS node.  Unless you
   have changed the default credentials, login with user `storageos`, password
-  `storageos`.  See: {% link _docs/reference/gui.md %}
+  `storageos`.  See: {{< ref "docs/reference/gui.md" >}}
 - Prometheus stats are exported on each cluster node at
   http://ADVERTISE_IP:5705/v1/metrics.  Prometheus 2.x is required.
 - The CLI can now stream realtime logs from the active StorageOS cluster with
   `storageos logs -f`.  Logs are aggregated from all cluster nodes over a single
   connection to the API.  Future releases will add support for filtering and
-  controlling the log level.  See: {% link _docs/reference/cli/logs.md %}
+  controlling the log level.  See: {{< ref "docs/reference/cli/logs.md" >}}
 - The location of the StorageOS volumes can now be configured on a per-node
   basis by setting the `DEVICE_DIR` environment variable on the StorageOS node
   container.
@@ -1292,7 +1292,7 @@ releases will strive to preserve compatibility between versions.
 - Docker can only access volumes created in the `default` namespace.
 - Clients mounting volumes from RHEL7/CentOS 7 will experience degraded
   performance due to the absence of the
-  [NBD kernel module]({%link _docs/prerequisites/systemconfiguration.md %})
+  [NBD kernel module]({{< ref "docs/prerequisites/systemconfiguration.md" >}})
   on those platforms.
 
 ## 0.8.1
@@ -1361,7 +1361,7 @@ StorageOS, what problems it is solving for you and how it can improve.  Join our
 - Docker can only access volumes created in the `default` namespace.
 - Clients mounting volumes from RHEL7/CentOS 7 will experience degraded
   performance due to the absence of the
-  [NBD kernel module]({%link _docs/prerequisites/systemconfiguration.md %})
+  [NBD kernel module]({{< ref "docs/prerequisites/systemconfiguration.md" >}})
   on those platforms.
 
 ## 0.7.10

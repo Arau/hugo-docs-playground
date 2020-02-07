@@ -10,7 +10,7 @@ cmd: kubectl
 ---
 
 > Make sure the 
-> [prerequisites for StorageOS]({%link  _docs/prerequisites/overview.md %}) are
+> [prerequisites for StorageOS]({{< ref "docs/prerequisites/_index.md" >}}) are
 > satisfied before proceeding.
 
 &nbsp;

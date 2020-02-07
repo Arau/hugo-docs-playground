@@ -20,14 +20,14 @@ careful consideration of whether to allow StorageOS or Zookeeper to handle repli
 
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes
 cluster. [See our guide on how to install StorageOS on Kubernetes for more
-information]({% link _docs/platforms/kubernetes/install/index.md %}).
+information]({{< ref "docs/platforms/kubernetes/install/_index.md" >}}).
 
 ## Deploying Zookeeper on Kubernetes
 
 ### Pre-requisites
 
 - StorageOS is assumed to have been installed; please check for the latest
-available version [here]({% link _docs/reference/release_notes.md %}).
+available version [here]({{< ref "docs/reference/release_notes.md" >}}).
 
 ### Helm
 
