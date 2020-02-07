@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "/v2"
 title = "StorageOS Documentation"
 
 enableRobotsTXT = true
@@ -10,7 +10,8 @@ theme = ["docsy"]
 enableGitInfo = true
 
 # Language settings
-publishDir = "sites/v2/public"
+#publishDir = "sites/v2/public"
+publishDir = "sites/stable/public/v2"
 contentDir = "content/v2"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false

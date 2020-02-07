@@ -10,7 +10,7 @@ theme = ["docsy"]
 enableGitInfo = true
 
 # Language settings
-publishDir = "sites/v1/public"
+publishDir = "sites/stable/public"
 contentDir = "content/v1"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
