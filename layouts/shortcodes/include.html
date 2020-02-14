@@ -1,5 +1,2 @@
 {{ $file := .Get 0   }}
-{{  $file  | readFile  | markdownify   }}
-{{ printf "MarkDown file %#v" $file }}
-
-{{ printf "%#v" $file }}
+{{  $file  | readFile  | markdownify }}

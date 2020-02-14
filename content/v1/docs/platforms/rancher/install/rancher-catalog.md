@@ -2,10 +2,11 @@
 linkTitle: Rancher Catalog
 title: Rancher Catalog
 weight: 1
+tags: [rancher, kubernets]
 platform: rancher
 platformUC: Rancher
 platform-pretty: "Rancher"
-k8s-version: 1.13
+sched_version: 1.13
 cmd: kubectl
 redirect_from: /docs/install/schedulers/rancher
 redirect_from: /docs/install/rancher

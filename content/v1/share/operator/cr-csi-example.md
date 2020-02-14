@@ -1,7 +1,6 @@
-This is a Cluster Definition example. 
+This is a Cluster Definition example.
 
 ```bash
-{{ page.cmd }} create -f - <<END
 apiVersion: "storageos.com/v1"
 kind: StorageOSCluster
 metadata:
@@ -19,7 +18,6 @@ spec:
   resources:
     requests:
     memory: "512Mi"
-END
 ```
 
 > Additional `spec` parameters are available on the [Cluster Operator

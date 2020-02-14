@@ -4,7 +4,7 @@ weight: 1
 platform: dockeree
 platform-pretty: "DockerEE"
 platformUC: Docker EE
-k8s-version: 1.11
+sched_version: 1.11
 cmd: kubectl
 redirect_from: /docs/install/schedulers/dockeree
 redirect_from: /docs/install/dockeree
@@ -28,4 +28,4 @@ for stateful workloads.
 > [prerequisites for StorageOS]({{< ref "docs/prerequisites/_index.md" >}}) are
 > satisfied before proceeding.
 
-{% include operator/install.md %}
+{{% operator-install %}}

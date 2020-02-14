@@ -21,23 +21,23 @@ documentation.
 - [Install StorageOS Operator](#1-install-storageos-operator)
 - [Create a Secret for default username and password](#2-create-a-secret)
 - [Trigger bootstrap using a CustomResource](#3-trigger-a-storageos-installation)
-{% if page.oc-version contains '4.' -%}
+{{- if ge .Page.Params.sched_version 4.0 }}
 - [Set SELinux Permissions](#4-set-selinux-permissions)
-{% endif %}
+{{- end }}
 
 ## 1. Install StorageOS operator
 
 Install the StorageOS operator using the following yaml manifest.
 
 ```bash
-{{ page.cmd }} create -f https://github.com/storageos/cluster-operator/releases/download/{{ site.latest_operator_version }}/storageos-operator.yaml
+{{ .Page.Params.cmd }} create -f https://github.com/storageos/cluster-operator/releases/download/{{ .Site.Params.latest_operator_version }}/storageos-operator.yaml
 ```
 
 
 ### Verify the Cluster Operator Pod Status
 
 ```bash
-[root@master03]# {{ page.cmd }} -n storageos-operator get pod
+[root@master03]# {{ .Page.Params.cmd }} -n storageos-operator get pod
 NAME                                         READY     STATUS    RESTARTS   AGE
 storageoscluster-operator-68678798ff-f28zw   1/1       Running   0          3m
 ```
@@ -54,22 +54,9 @@ account which can be used with the StorageOS CLI and to login to the StorageOS
 GUI. The account defined in the secret is also used by Kubernetes to
 authenticate against the StorageOS API when installing with the native driver.
 
-```bash
-{{ page.cmd }} create -f - <<END
-apiVersion: v1
-kind: Secret
-metadata:
-  name: "storageos-api"
-  namespace: "storageos-operator"
-  labels:
-    app: "storageos"
-type: "kubernetes.io/storageos"
-data:
-  # echo -n '<secret>' | base64
-  apiUsername: c3RvcmFnZW9z
-  apiPassword: c3RvcmFnZW9z
-END
-```
+
+{{ readFile "share/operator/secret.md" | markdownify }}
+
 
 This example contains a default password, for production installations, use a
 unique, strong password.
@@ -82,29 +69,53 @@ unique, strong password.
 > If you wish to change the default accounts details post-install please see [Managing
 > Users](/docs/operations/users#altering-the-storageos-api-account)
 
-## 3. Trigger a StorageOS installation
+## 3 Trigger a StorageOS installation
 
-{% if page.platform == "azure-aks" %}
-{% include operator/cr-csi-example.md %}
-{% elsif page.platform == "rancher" or page.platform == "dockeree" %}
-{% include operator/cr-csi-shareddir.md %}
-{% elsif page.oc-version contains '4.' %}
-{% include operator/cr-csi-openshift4.md %}
-{% elsif page.platform == "kubernetes" %}
-{% assign k8s-version = page.k8s-version | plus: 0 %}
-{% if k8s-version >= 1.13 %}
-{% include operator/cr-csi-example.md %}
-{% else %}
-{% include operator/cr-basic-example.md %}
-{% endif %}
-{% else %}
-{% include operator/cr-basic-example.md %}
-{% endif %}
+This is a Cluster Definition example.
+
+```bash
+apiVersion: "storageos.com/v1"
+kind: StorageOSCluster
+metadata:
+  name: "example-storageos"
+  namespace: "storageos-operator"
+spec:
+  secretRefName: "storageos-api" # Reference from the Secret created in the previous step
+  secretRefNamespace: "storageos-operator"  # Namespace of the Secret
+  k8sDistro: "{{ .Page.Params.platform }}"
+  images:
+    nodeContainer: "storageos/node:{{ site.Params.latest_node_version }}" # StorageOS version
+{{- if and (gt .Page.Params.sched_version 1.12) (lt .Page.Params.sched_version 3.0) }}
+  csi:
+    enable: true
+    deploymentStrategy: deployment
+{{- end }}
+{{- if eq .Page.Params.platform "dockeree" }}
+    sharedDir: '/var/lib/kubelet/plugins/kubernetes.io~storageos' # Needed when Kubelet as a container
+{{- end }}
+  resources:
+    requests:
+    memory: "512Mi"
+#  nodeSelectorTerms:
+#    - matchExpressions:
+#      - key: "node-role.kubernetes.io/worker" # Compute node label will vary according to your installation
+#        operator: In
+#        values:
+#        - "true"
+```
+
+> Additional `spec` parameters are available on the [Cluster Operator
+> configuration]( {{ ref . "docs/reference/cluster-operator/configuration.md" }})
+> page.
+
+> You can find more examples such as deployments referencing a external etcd kv
+> store for StorageOS in the [Cluster Operator examples](
+> {{ ref . "docs/reference/cluster-operator/examples.md" }}) page.
 
 ### Verify StorageOS Installation
 
 ```bash
-[root@master03]# {{ page.cmd }} -n storageos get pods -w
+[root@master03]# {{ .Page.Params.cmd }} -n storageos get pods -w
 NAME                                    READY   STATUS    RESTARTS   AGE
 storageos-daemonset-75f6c               3/3     Running   0          3m
 storageos-daemonset-czbqx               3/3     Running   0          3m
@@ -115,9 +126,9 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   6          3m
 
 > The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.
 
-{% if page.oc-version contains '4.' %}
+{{- if ge .Page.Params.sched_version 4.0 }}
 ## 4. Set SELinux Permissions
 {% include platforms/openshift4-selinux.md %}
-{% endif %}
+{{-  end }}
 
 {% include operator/first-volume.md %}

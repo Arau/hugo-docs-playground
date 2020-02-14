@@ -5,7 +5,7 @@ weight: 10
 platform: rancher
 platformUC: Rancher
 platform-pretty: "Rancher"
-k8s-version: 1.13
+sched_version: 1.13
 cmd: kubectl
 ---
 

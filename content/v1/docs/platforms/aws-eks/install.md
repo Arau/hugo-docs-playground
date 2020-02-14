@@ -6,7 +6,7 @@ platform: "aws-eks"
 platform-pretty: "EKS"
 platformUC: Kubernetes
 cmd: kubectl
-k8s-version: 1.14
+sched_version: 1.14
 chart-version: 0.2.x
 ---
 
@@ -20,4 +20,4 @@ chart-version: 0.2.x
 
 &nbsp;
 
-{% include operator/install.md %}
+{{% operator-install %}}
