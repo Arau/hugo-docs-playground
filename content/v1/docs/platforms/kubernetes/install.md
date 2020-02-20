@@ -1,9 +1,6 @@
 ---
 title: Install StorageOS
 weight: 1
-platform: "kubernetes"
-platform-pretty: "Kubernetes"
-platformUC: Kubernetes
 chart-version: 0.2.x
 redirect_from: /docs/install/schedulers/kubernetes
 redirect_from: /docs/install/kubernetes

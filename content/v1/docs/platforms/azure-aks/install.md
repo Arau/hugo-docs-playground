@@ -1,11 +1,6 @@
 ---
 title: "Install StorageOS"
 weight: 1
-platform: "azure-aks"
-platform-pretty: "AKS"
-platformUC: Kubernetes
-cmd: kubectl
-sched_version: "1.14"
 ---
 
 > __Only installations of StorageOS with CSI are supported for AKS.__
@@ -15,4 +10,5 @@ sched_version: "1.14"
 > deployment advice.
 
 &nbsp;
-{{% operator-install %}}
+
+{{% operator-install cmd="kubectl" platform="azure-aks" sched_version="1.14" %}}
