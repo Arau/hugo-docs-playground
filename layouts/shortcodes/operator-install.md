@@ -132,5 +132,12 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   6          3m
 
 {{- if ge $sched_version 4.0 }}
 ## 4. Set SELinux Permissions
-{{ partial "content/openshift4-selinux.md" . }}
+
+The StorageOS CSI helper needs to mount a CSI Socket into the container so
+on each node add the `svirt_sandbox_file_t` flag to the CSI socket directory
+and CSI socket.
+
+   ```
+   chcon -Rt svirt_sandbox_file_t /var/lib/kubelet/plugins_registry/storageos
+   ```
 {{-  end }}
