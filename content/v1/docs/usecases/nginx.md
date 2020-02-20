@@ -19,7 +19,7 @@ information]({{< ref "docs/platforms/kubernetes/install.md" >}}).
    git clone https://github.com/storageos/use-cases.git storageos-usecases
    ```
    StatefulSet definition
-  ```yaml
+   ```yaml
    apiVersion: apps/v1
    kind: StatefulSet
    metadata:
@@ -52,7 +52,7 @@ information]({{< ref "docs/platforms/kubernetes/install.md" >}}).
              resources:
                requests:
                  storage: 5Gi
-     ```
+   ```
    This excerpt is from the StatefulSet definition. This file contains the
    VolumeClaim template that will dynamically provision storage, using the
    StorageOS storage class. Dynamic provisioning occurs as a volumeMount has

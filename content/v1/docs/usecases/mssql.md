@@ -18,36 +18,36 @@ information]({{< ref "docs/platforms/kubernetes/install.md" >}}).
    git clone https://github.com/storageos/use-cases.git storageos-usecases
    ```
    StatefulSet defintion
-  ```yaml
-kind: StatefulSet
-metadata:
- name: mssql
-spec:
- selector:
-   matchLabels:
-     app: mssql
-     env: prod
- serviceName: mssql
- replicas: 1
- ...
- spec:
-     serviceAccountName: mssql
-      ...
-      volumeMounts:
-       - name: data
-         mountPath: /var/opt/mssql
-   ...
-volumeClaimTemplates:
- - metadata:
-     name: data
-     labels:
-       env: prod
+   ```yaml
+   kind: StatefulSet
+   metadata:
+    name: mssql
    spec:
-     accessModes: ["ReadWriteOnce"]
-     storageClassName: "fast" # StorageOS storageClass 
-     resources:
-       requests:
-         storage: 5Gi
+    selector:
+      matchLabels:
+        app: mssql
+        env: prod
+    serviceName: mssql
+    replicas: 1
+    ...
+    spec:
+        serviceAccountName: mssql
+         ...
+         volumeMounts:
+          - name: data
+            mountPath: /var/opt/mssql
+      ...
+   volumeClaimTemplates:
+    - metadata:
+        name: data
+        labels:
+          env: prod
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        storageClassName: "fast" # StorageOS storageClass 
+        resources:
+          requests:
+            storage: 5Gi
    ```
    This excerpt is from the StatefulSet definition. This file contains the
    VolumeClaim template that will dynamically provision storage, using the
