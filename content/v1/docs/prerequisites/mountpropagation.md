@@ -23,7 +23,7 @@ EOF
 # systemctl restart docker.service
 ```
 
-To confirm behaviour, the following command should run without error
+To confirm behaviour, the following command should run without error.
 
 ```
 docker run -it --rm -v /mnt:/mnt:shared busybox sh -c /bin/date
