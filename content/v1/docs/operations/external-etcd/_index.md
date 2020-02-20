@@ -17,8 +17,6 @@ rest of the nodes act as etcd clients, keeping consistency of the cluster by
 communicating with the etcd servers. Whether a StorageOS node acts as an etcd server
 or client cannot be changed once a StorageOS container has started.
 
-&nbsp; <!-- this is a blank line -->
-
 __It is recommended to use an external etcd cluster for production deployments__. To
 use an etcd cluster provisioned and maintained outside the scope of StorageOS,
 StorageOS will locate the etcd endpoint using environment variables. When
@@ -28,16 +26,6 @@ set in the [StorageOSCluster resource definition](
 chart can set the variables in the [values.yaml
 ](https://github.com/storageos/charts/blob/master/stable/storageos/values.yaml)
 file.
-
-Manual installations with the yaml manifests found in our `deploy`
-[repository](https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/standard)
-requires that two specific environment variables are set in the
-[daemonset](https://github.com/storageos/deploy/blob/master/k8s/deploy-storageos/standard/manifests/040_daemonset.yaml_template).
-
-* `KV_BACKEND`: Set to `etcd`
-* `KV_ADDR`: Comma separated list of etcd targets, in the form host[:port].
-
-&nbsp; <!-- this is a blank line -->
 
 Etcd availability is mandatory for proper functioning of StorageOS. In
 particular, changes to the cluster; creation/deletion of volumes,
@@ -55,7 +43,6 @@ or region can make StorageOS detect etcd nodes as unavailable because of latency
 
 *StorageOS cannot be held responsible for supporting an external etcd cluster.*
 
-&nbsp; <!-- this is a blank line -->
 
 ## Suggested Deployment Models
 
@@ -63,25 +50,23 @@ or region can make StorageOS detect etcd nodes as unavailable because of latency
 > to StorageOS containers differ. The following examples work with both
 > Kubernetes and Openshift.
 
-## Etcd cluster-operator
-Etcd can be deployed in Kubernetes using the official [etcd-operator](
-https://github.com/coreos/etcd-operator).
-
-Examples of deploying etcd clusters using the etcd-operator on
-[Kubernetes](
-https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/etcd-as-svc)
-and
-[OpenShift](https://github.com/storageos/deploy/tree/master/openshift/deploy-storageos/etcd-as-svc)
-are available.
-
-The official etcd-operator repository also has a backup deployment operator
-that can help backup etcd data. Make sure you take frequent backups of
-the etcd cluster as it holds all the StorageOS cluster metadata.
-
 ## External etcd
 
 To deploy StorageOS on a Kubernetes cluster using an etcd cluster running
 outside Kubernetes, you can look at the following
-[repository](https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/external-etcd),
+[repository](https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/etcd-helpers/etcd-ansible-systemd),
 where etcd endpoints are referenced using a Kubernetes external service.
 
+## Etcd cluster-operator 
+Etcd can be deployed in Kubernetes using the official [etcd-operator](
+https://github.com/coreos/etcd-operator).
+
+Examples of deploying etcd clusters using the etcd-operator on [Kubernetes](
+https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/etcd-helpers/etcd-operator-example)
+and
+[OpenShift](https://github.com/storageos/deploy/tree/master/openshift/deploy-storageos/etcd-helpers/etcd-operator-example)
+are available.
+
+The official etcd-operator repository also has a backup deployment operator
+that can help backup etcd data. Make sure you take frequent backups of the etcd
+cluster as it holds all the StorageOS cluster metadata.
