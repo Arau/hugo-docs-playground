@@ -71,6 +71,7 @@ copyright = "The Docsy Authors"
 privacy_policy = "https://policies.google.com/privacy"
 latest_node_version = "1.5.3"
 latest_operator_version = "1.5.3"
+latest_cli_version= "1.2.2"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]

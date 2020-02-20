@@ -5,12 +5,11 @@ title: Release notes
 We recommend always using "tagged" versions of StorageOS rather than "latest",
 and to perform upgrades only after reading the release notes.
 
-The latest tagged release is `{{ site.latest_node_version }}`, available from
-[Docker Hub](https://hub.docker.com/r/storageos/node/) as `storageos/node:{{
-site.latest_node_version }}`, or via the [Helm
+The latest tagged release is `{{< param latest_node_version >}}`, available from
+[Docker Hub](https://hub.docker.com/r/storageos/node/) as `storageos/node:{{< param latest_node_version >}}`, or via the [Helm
 Chart](https://github.com/storageos/charts)
 
-The latest CLI release is `{{ site.latest_cli_version }}`, available from
+The latest CLI release is `{{< param latest_cli_version >}}`, available from
 [Github](https://github.com/storageos/go-cli/releases)
 
 # Upgrading
