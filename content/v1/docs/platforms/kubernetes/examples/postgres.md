@@ -14,7 +14,7 @@ with many concurrent users.
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes
 cluster. If you need to setup StorageOS on Kubernetes then please see our guide
 to [installing StorageOS on Kubernetes]({% link
-"docs/platforms/kubernetes/install/_index.md" >}})
+"docs/platforms/kubernetes/install.md" >}})
 
 ## Deploying PostgreSQL on Kubernetes
 

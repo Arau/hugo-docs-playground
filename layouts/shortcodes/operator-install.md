@@ -1,3 +1,7 @@
+{{ $cmd := .Get "cmd"}}
+{{ $platform := .Get "platform" }}
+{{ $sched_version := .Get "sched_version" }}
+
 The StorageOS Cluster Operator is a [Kubernetes native
 application](https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/)
 developed to deploy and configure StorageOS clusters, and assist with
@@ -21,7 +25,7 @@ documentation.
 - [Install StorageOS Operator](#1-install-storageos-operator)
 - [Create a Secret for default username and password](#2-create-a-secret)
 - [Trigger bootstrap using a CustomResource](#3-trigger-a-storageos-installation)
-{{- if ge .Page.Params.sched_version 4.0 }}
+{{- if ge $sched_version 4.0 }}
 - [Set SELinux Permissions](#4-set-selinux-permissions)
 {{- end }}
 
@@ -30,14 +34,14 @@ documentation.
 Install the StorageOS operator using the following yaml manifest.
 
 ```bash
-{{ .Page.Params.cmd }} create -f https://github.com/storageos/cluster-operator/releases/download/{{ .Site.Params.latest_operator_version }}/storageos-operator.yaml
+{{ $cmd }} create -f https://github.com/storageos/cluster-operator/releases/download/{{ .Site.Params.latest_operator_version }}/storageos-operator.yaml
 ```
 
 
 ### Verify the Cluster Operator Pod Status
 
 ```bash
-[root@master03]# {{ .Page.Params.cmd }} -n storageos-operator get pod
+[root@master03]# {{ $cmd }} -n storageos-operator get pod
 NAME                                         READY     STATUS    RESTARTS   AGE
 storageoscluster-operator-68678798ff-f28zw   1/1       Running   0          3m
 ```
@@ -82,15 +86,15 @@ metadata:
 spec:
   secretRefName: "storageos-api" # Reference from the Secret created in the previous step
   secretRefNamespace: "storageos-operator"  # Namespace of the Secret
-  k8sDistro: "{{ .Page.Params.platform }}"
+  k8sDistro: "{{ $platform }}"
   images:
     nodeContainer: "storageos/node:{{ site.Params.latest_node_version }}" # StorageOS version
-{{- if and (gt .Page.Params.sched_version 1.12) (lt .Page.Params.sched_version 3.0) }}
+{{- if and (gt $sched_version 1.12) (lt $sched_version 3.0) }}
   csi:
     enable: true
     deploymentStrategy: deployment
 {{- end }}
-{{- if eq .Page.Params.platform "dockeree" }}
+{{- if eq $platform "dockeree" }}
     sharedDir: '/var/lib/kubelet/plugins/kubernetes.io~storageos' # Needed when Kubelet as a container
 {{- end }}
   resources:
@@ -115,7 +119,7 @@ spec:
 ### Verify StorageOS Installation
 
 ```bash
-[root@master03]# {{ .Page.Params.cmd }} -n storageos get pods -w
+[root@master03]# {{ $cmd }} -n storageos get pods -w
 NAME                                    READY   STATUS    RESTARTS   AGE
 storageos-daemonset-75f6c               3/3     Running   0          3m
 storageos-daemonset-czbqx               3/3     Running   0          3m
@@ -126,9 +130,7 @@ storageos-scheduler-6d67b46f67-5c46j    1/1     Running   6          3m
 
 > The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.
 
-{{- if ge .Page.Params.sched_version 4.0 }}
+{{- if ge $sched_version 4.0 }}
 ## 4. Set SELinux Permissions
-{% include platforms/openshift4-selinux.md %}
+{{ partial "content/openshift4-selinux.md" . }}
 {{-  end }}
-
-{% include operator/first-volume.md %}

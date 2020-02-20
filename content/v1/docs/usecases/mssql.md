@@ -9,7 +9,7 @@ linux.
 
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes
 cluster. [See our guide on how to install StorageOS on Kubernetes for more
-information]({{< ref "docs/platforms/kubernetes/install/_index.md" >}}).
+information]({{< ref "docs/platforms/kubernetes/install.md" >}}).
 
 ## Deploying MS SQL on Kubernetes
 
