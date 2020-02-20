@@ -43,9 +43,9 @@ Prepare upgrade:
 1. Prepare an etcd backup if using external etcd.
 1. Optionally make sure all nodes have the new StorageOS image pulled, so the new
    containers will start promptly.
-  ```bash
-docker pull storageos/node:$NEW_VERSION
-  ```
+    ```bash
+    docker pull storageos/node:$NEW_VERSION
+    ```
 1. Downscale any applications using StorageOS volumes to 0.
 
     > Any mount points will hang while StorageOS Pods are not present if the
@@ -61,9 +61,9 @@ docker pull storageos/node:$NEW_VERSION
     disabled.
 1. Execute the StorageOS Upgrade cluster helper
     ```bash
-curl -Ls https://raw.githubusercontent.com/storageos/deploy/master/k8s/deploy-storageos/upgrade-helper/prepare-upgrade.sh -o prepare-upgrade.sh
-chmod +x ./prepare-upgrade.sh
-./prepare-upgrade.sh
+    curl -Ls https://raw.githubusercontent.com/storageos/deploy/master/k8s/deploy-storageos/upgrade-helper/prepare-upgrade.sh -o prepare-upgrade.sh
+    chmod +x ./prepare-upgrade.sh
+    ./prepare-upgrade.sh
     ```
 
     > The upgrade helper patches the StorageOS DaemonSet and sets the latest
@@ -128,19 +128,23 @@ Prepare upgrade:
 
 1. Make sure that all volumes have at least one replica
 
-    {% raw %}
     ```bash
     # Save what volumes had 0 replicas to restore to that state later
-    $ storageos volume ls --format "table {{.Name}}\t{{.Replicas}}"  | grep '0/0' | awk '{ print $1  }' > /var/tmp/volume-0-replicas.txt
+    $ storageos volume ls --format "table {{.Name}}\t{{.Replicas}}"  \
+        | grep '0/0' \
+        | awk '{ print $1  }' \
+        > /var/tmp/volume-0-replicas.txt
 
     # Update volumes to enable 1 replica
-    $ storageos volume ls --format "table {{.Name}}\t{{.Replicas}}"  | grep '0/0' | awk '{ print $1  }' | xargs -I{} storageos volume update --label-add storageos.com/replicas=1 {}
+    $ storageos volume ls --format "table {{.Name}}\t{{.Replicas}}" \
+        | grep '0/0' \
+        | awk '{ print $1  }' \
+        | xargs -I{} storageos volume update --label-add storageos.com/replicas=1 {}
     ```
-    {% endraw %}
+
 1. Wait until all replicas are synced (1/1)
 
     ```bash
-    {% raw %}
     $ storageos volume ls --format "table {{.Name}}\t{{.Replicas}}" 
     NAMESPACE/NAME                                      REPLICAS
     default/pvc-166ba271-e75c-11e8-8a20-0683b54ab438    0/1
@@ -148,21 +152,21 @@ Prepare upgrade:
     postgress/pvc-3b39f530-e75c-11e8-8a20-0683b54ab438  0/1
     redis/pvc-8b8b37eb-e75d-11e8-8a20-0683b54ab438      0/1
     (...)
+
     $ storageos volume ls --format "table {{.Name}}\t{{.Replicas}}" 
     NAMESPACE/NAME                                      REPLICAS
     default/pvc-166ba271-e75c-11e8-8a20-0683b54ab438    1/1
     mysql/pvc-2b38b2e2-e75c-11e8-8a20-0683b54ab438      1/1
     postgress/pvc-3b39f530-e75c-11e8-8a20-0683b54ab438  1/1
     redis/pvc-8b8b37eb-e75d-11e8-8a20-0683b54ab438      1/1
-    {% endraw %}
     ```
 
 Execute the upgrade:
 1. Execute the StorageOS Upgrade cluster helper
     ```bash
-curl -Ls https://raw.githubusercontent.com/storageos/deploy/master/k8s/deploy-storageos/upgrade-helper/prepare-upgrade.sh -o prepare-upgrade.sh
-chmod +x ./prepare-upgrade.sh
-./prepare-upgrade.sh
+    curl -Ls https://raw.githubusercontent.com/storageos/deploy/master/k8s/deploy-storageos/upgrade-helper/prepare-upgrade.sh -o prepare-upgrade.sh
+    chmod +x ./prepare-upgrade.sh
+    ./prepare-upgrade.sh
     ```
 
     > The upgrade helper patches the StorageOS DaemonSet and sets the latest
