@@ -12,8 +12,8 @@ redirect_from: /docs/install/kubernetes
 
 &nbsp;
 
-{{< tabs tabTotal="6" tabID="1" tabName1="1.17" tabName2="1.16" tabName3="1.15" tabName4="1.14" tabName5="1.13" tabName6="1.12" >}}
-{{% tab tabNum="1" %}}
+{{< tabs tabTotal="6" tabID="1" tabHREFPrefix="k8s-" tabName1="1.17" tabName2="1.16" tabName3="1.15" tabName4="1.14" tabName5="1.13" tabName6="1.12" >}}
+{{% tab tabNum="1" tabRef="k8s-117" %}}
 
 # Install StorageOS on Kubernetes 1.17
 
@@ -21,21 +21,21 @@ redirect_from: /docs/install/kubernetes
 
 
 {{% /tab %}}
-{{% tab tabNum="2" %}}
+{{% tab tabNum="2" tabRef="k8s-116" %}}
 
 # Install StorageOS on Kubernetes 1.16
 
 {{% operator-install cmd="kubectl" platform="kubernetes" sched_version="1.16" %}}
 
 {{% /tab %}}
-{{% tab tabNum="3" %}}
+{{% tab tabNum="3" tabRef="k8s-115" %}}
 
 # Install StorageOS on Kubernetes 1.15
 
 {{% operator-install cmd="kubectl" platform="kubernetes" sched_version="1.15" %}}
 
 {{% /tab %}}
-{{% tab tabNum="4" %}}
+{{% tab tabNum="4" tabRef="k8s-114" %}}
 
 # Install StorageOS on Kubernetes 1.14
 
@@ -43,14 +43,14 @@ redirect_from: /docs/install/kubernetes
 
 {{% /tab %}}
 
-{{% tab tabNum="5" %}}
+{{% tab tabNum="5" tabRef="k8s-113" %}}
 
 # Install StorageOS on Kubernetes 1.13
 
 {{% operator-install cmd="kubectl" platform="kubernetes" sched_version="1.13" %}}
 
 {{% /tab %}}
-{{% tab tabNum="6" %}}
+{{% tab tabNum="6" tabRef="k8s-112" %}}
 
 # Install StorageOS on Kubernetes 1.12
 
