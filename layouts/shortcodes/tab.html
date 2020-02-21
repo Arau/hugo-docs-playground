@@ -1,12 +1,11 @@
-{{ $tab := .Get "tabNum" }}
 {{ $tabName := .Get "tabName" }}
-{{ $tabRef := .Get "tabRef" | urlize }}
+{{ $tabRef := default "$tabName" (.Get "tabRef" | urlize) }}
 
-{{ if eq $tab "1" }}
+{{ $firstTab := default "false" (.Get "firstTab") }}
+{{ if eq $firstTab "true" }}
 
 <div class="tab-pane fade show active" id="{{ $tabRef }}" role="tabpanel" aria-labelledby="nav-{{ $tabName }}">
     {{ $.Inner  }}
-
 </div>
 
 {{ else }}
