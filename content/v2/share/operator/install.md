@@ -1,4 +1,3 @@
-
 The StorageOS Cluster Operator is a [Kubernetes native
 application](https://kubernetes.io/docs/concepts/extend-kubernetes/extend-cluster/)
 developed to deploy and configure StorageOS clusters, and assist with

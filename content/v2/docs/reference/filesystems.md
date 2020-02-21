@@ -16,6 +16,12 @@ StorageOS provides a block device on which a file system can be created. The
 creation of the filesystem is either handled by StorageOS or by Kubernetes
 which affects what filesystems can be created.
 
+### CSI Driver
+
+When using StorageOS with the CSI driver, StorageOS is responsible for running
+mkfs against the block device that pods mount. StorageOS is able to create
+ext2, ext3, ext4 and xfs file systems.
+
 ### Native Driver
 
 When using StorageOS with the native driver, Kubernetes is responsible for running mkfs
@@ -24,9 +30,3 @@ can be used.
 
 However if the StorageOS CLI is used to mount a device then an ext4 filesystem
 will be created by default.
-
-### CSI Driver
-
-When using StorageOS with the CSI driver, StorageOS is responsible for running
-mkfs against the block device that pods mount. StorageOS is able to create
-ext2, ext3, ext4 and xfs file systems.

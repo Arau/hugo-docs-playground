@@ -56,7 +56,5 @@ volume on a node.
 
 
 We present various metrics regarding StorageOS volumes, including used capacity
-and throughput, via our [Prometheus Endpoint]({% link
+and throughput, via our [Prometheus Endpoint]({{< ref
 "docs/reference/prometheus.md" >}}).
-
-

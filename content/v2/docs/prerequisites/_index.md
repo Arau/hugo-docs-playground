@@ -13,10 +13,9 @@ One machine with the following:
 
 1. Minimum two core with 4GB RAM.
 1. Linux with a 64-bit architecture.
-1. Docker 1.10 or later, with [mount propagation]({{< ref "docs/prerequisites/mountpropagation.md" >}}) enabled and preferably `CHANNEL=stable`
-1. The necessary ports should be open. See the [ports and firewall settings]({{< ref "docs/prerequisites/firewalls.md" >}})
-1. A mechanism for [device presentation]({% link
-   "docs/prerequisites/systemconfiguration.md" >}})
+1. Docker 1.10 or later, with [mount propagation]({{< ref "docs/prerequisites/mountpropagation.md" >}}) enabled and preferably `CHANNEL=stable`.
+1. The necessary ports should be open. See the [ports and firewall settings]({{< ref "docs/prerequisites/firewalls.md" >}}).
+1. A mechanism for [device presentation]({{< ref "docs/prerequisites/systemconfiguration.md" >}}).
 
 
 ## Recommended:

@@ -1,5 +1,6 @@
 ---
 title: API Reference
+type: swagger
 ---
 
-StorageOS Control plane API is accessible either through port 80 or 8000.
+{{< swaggerui src="/api-swagger.yaml" >}}

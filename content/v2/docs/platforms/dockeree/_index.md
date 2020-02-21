@@ -18,3 +18,5 @@ workloads)  are also not supported.  As a consequence, StorageOS volumes can
 only be provisioned on Kubernetes nodes, and only these nodes should be used
 for stateful workloads.
 
+{{% include "content/kubernetes-with-storageos.md" %}}
+{{% include "content/csi-note.md" %}}

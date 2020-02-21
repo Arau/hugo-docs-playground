@@ -9,7 +9,7 @@ web-based applications including WordPress.
 
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes
 cluster. [See our guide on how to install StorageOS on Kubernetes for more
-information]({{< ref "docs/platforms/kubernetes/install/_index.md" >}}).
+information]({{< ref "docs/platforms/kubernetes/install.md" >}}).
 
 ## Deploying MySQL on Kubernetes
 
@@ -19,40 +19,40 @@ information]({{< ref "docs/platforms/kubernetes/install/_index.md" >}}).
    ```
 
    StatefulSet defintion
-  ```yaml
-apiVersion: apps/v1
-kind: StatefulSet
-metadata:
- name: mysql
-spec:
- selector:
-   matchLabels:
-     app: mysql
-     env: prod
- serviceName: mysql
- replicas: 1
- ...
- spec:
-     serviceAccountName: mysql
-      ...
-      volumeMounts:
-       - name: data
-         mountPath: /var/lib/mysql
-         subPath: mysql
-       - name: conf
-         mountPath: /etc/mysql/mysql.conf.d
-   ...
-volumeClaimTemplates:
- - metadata:
-     name: data
-     labels:
-       env: prod
+   ```yaml
+   apiversion: apps/v1
+   kind: statefulset
+   metadata:
+    name: mysql
    spec:
-     accessModes: ["ReadWriteOnce"]
-     storageClassName: "fast" # StorageOS storageClass 
-     resources:
-       requests:
-         storage: 5Gi
+    selector:
+      matchlabels:
+        app: mysql
+        env: prod
+    servicename: mysql
+    replicas: 1
+    ...
+    spec:
+        serviceaccountname: mysql
+         ...
+         volumemounts:
+          - name: data
+            mountpath: /var/lib/mysql
+            subpath: mysql
+          - name: conf
+            mountpath: /etc/mysql/mysql.conf.d
+      ...
+   volumeclaimtemplates:
+    - metadata:
+        name: data
+        labels:
+          env: prod
+      spec:
+        accessmodes: ["readwriteonce"]
+        storageclassname: "fast" # storageos storageclass 
+        resources:
+          requests:
+            storage: 5gi
    ```
    This excerpt is from the StatefulSet definition. This file contains the
    VolumeClaim template that will dynamically provision storage, using the

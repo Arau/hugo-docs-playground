@@ -12,4 +12,4 @@ to the namespace.
 >Note: Users always have access to the default namespace
 
 For more information on how to use policies, see the 
-[Policies operations]({{< ref "docs/operations/policies.md" >}}) page
+[Policies operations]({{< ref "docs/operations/policies.md" >}}) page.

@@ -19,7 +19,7 @@ is required.
 
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes
 cluster. [See our guide on how to install StorageOS on Kubernetes for more
-information]({{< ref "docs/platforms/kubernetes/install/_index.md" >}}).
+information]({{< ref "docs/platforms/kubernetes/install.md" >}}).
 
 ## Deploying Cassandra on Kubernetes
 
@@ -31,33 +31,33 @@ information]({{< ref "docs/platforms/kubernetes/install/_index.md" >}}).
 
    StatefulSet defintion
 
-   ```yaml
-apiVersion: apps/v1
-kind: StatefulSet
-metadata:
- name: cassandra
-spec:
- selector:
-   matchLabels:
-     app: cassandra
- serviceName: cassandra
- replicas: 3
- ...
- spec:
-      ...
-      volumeMounts:
-       - name: cassandra-data
-         mountPath: /var/lib/cassandra
- ...
-volumeClaimTemplates:
- - metadata:
-     name: cassandra-data
-   spec:
-     accessModes: ["ReadWriteOnce"]
-     storageClassName: "fast" # StorageOS storageClass
-     resources:
-       requests:
-         storage: 5Gi
+    ```yaml
+    apiVersion: apps/v1
+    kind: StatefulSet
+    metadata:
+     name: cassandra
+    spec:
+     selector:
+       matchLabels:
+         app: cassandra
+     serviceName: cassandra
+     replicas: 3
+     ...
+     spec:
+          ...
+          volumeMounts:
+           - name: cassandra-data
+             mountPath: /var/lib/cassandra
+     ...
+    volumeClaimTemplates:
+     - metadata:
+         name: cassandra-data
+       spec:
+         accessModes: ["ReadWriteOnce"]
+         storageClassName: "fast" # StorageOS storageClass
+         resources:
+           requests:
+             storage: 5Gi
    ```
 
    This excerpt is from the StatefulSet definition. This file contains the

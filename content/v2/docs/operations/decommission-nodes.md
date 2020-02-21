@@ -7,9 +7,7 @@ StorageOS nodes can be decommissioned and removed from the cluster using the
 StorageOS CLI.
 
 > This functionality is only available when StorageOS is deployed with
-> `KV_BACKEND=etcd`, so the KV store is external to StorageOS. Please see the
-> [deploy etc-as-svc example for more information](https://github.com/storageos/deploy/tree/master/k8s/deploy-storageos/etcd-as-svc)
-> for more information.
+> `KV_BACKEND=etcd`, so the KV store is external to StorageOS.
 
 There are safeguards to make sure data is not lost unintentionally. Only nodes
 in state `Offline` can be removed from the StorageOS cluster. Note that once

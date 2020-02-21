@@ -45,7 +45,7 @@ For more details, check the
 
 ## Scripts executed
 
-The `storageos-init` container executes the following scripts, as of {{ site.latest_node_version }}:
+The `storageos-init` container executes the following scripts.
 
 - [enable-lio](https://github.com/storageos/init/tree/master/scripts/01-lio)
 - [dbupgrade](https://github.com/storageos/init/tree/master/scripts/10-dbupgrade-v1v2)

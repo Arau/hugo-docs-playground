@@ -14,10 +14,10 @@ labels are present by default.
 ## StorageOS Node labels
 
 Nodes do not have any feature labels present by default.  When StorageOS is run
-within Kubernetes with the [Cluster Operator]({% link
-"docs/reference/cluster-operator/_index.md" >}}), any node labels set on Kubernetes
-nodes are available within StorageOS.  Node labels may also be set with the CLI
-or UI.
+within Kubernetes with the [Cluster Operator]({{< ref
+"docs/reference/cluster-operator/_index.md" >}}), any node labels set on
+Kubernetes nodes are available within StorageOS.  Node labels may also be set
+with the CLI or UI.
 
 | Feature             | Label                               | Values                               | Description                                                                                                                                                                                                  |
 | :------------------ | :---------------------------------- | :----------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------                                                               |

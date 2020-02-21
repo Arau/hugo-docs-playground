@@ -15,7 +15,7 @@ via SFTP.
 
 The files create a stateful set that can be used *AFTER* a StorageOS cluster
 has been created. [See our guide on how to install StorageOS on Kubernetes for more
-information]({{< ref "docs/platforms/kubernetes/install/_index.md" >}}).
+information]({{< ref "docs/platforms/kubernetes/install.md" >}}).
 
 
 ## Clone Repository

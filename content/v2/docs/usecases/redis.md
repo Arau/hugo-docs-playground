@@ -8,51 +8,51 @@ Redis is a popular networked, in-memory, key-value data store with optional dura
 
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes
 cluster. [See our guide on how to install StorageOS on Kubernetes for more
-information]({{< ref "docs/platforms/kubernetes/install/_index.md" >}}).
+information]({{< ref "docs/platforms/kubernetes/install.md" >}}).
 
 ## Deploying Redis on Kubernetes
 
 1. You can find the latest files in the StorageOS use cases repository
-   ```bash
-   git clone https://github.com/storageos/use-cases.git storageos-usecases
-   ```
+    ```bash
+    git clone https://github.com/storageos/use-cases.git storageos-usecases
+    ```
 
-   StatefulSet defintion
-  ```yaml
-kind: StatefulSet
-metadata:
- name: redis
-spec:
- selector:
-   matchLabels:
-     app: redis
-     env: prod
- serviceName: redis
- replicas: 1
- ...
- spec:
-     serviceAccountName: redis
-      ...
-      volumeMounts:
-       - name: data
-         mountPath: /bitnami/redis/data
-   ...
-volumeClaimTemplates:
- - metadata:
-     name: data
-     labels:
+    StatefulSet defintion
+    ```yaml
+    kind: StatefulSet
+    metadata:
+    name: redis
+    spec:
+    selector:
+     matchLabels:
+       app: redis
        env: prod
-   spec:
-     accessModes: ["ReadWriteOnce"]
-     storageClassName: "fast" # StorageOS storageClass 
-     resources:
-       requests:
-         storage: 5Gi
-   ```
-   This excerpt is from the StatefulSet definition. This file contains the
-   VolumeClaim template that will dynamically provision storage, using the
-   StorageOS storage class. Dynamic provisioning occurs as a volumeMount has
-   been declared with the same name as a Volume Claim.
+    serviceName: redis
+    replicas: 1
+    ...
+    spec:
+       serviceAccountName: redis
+        ...
+        volumeMounts:
+         - name: data
+           mountPath: /bitnami/redis/data
+     ...
+    volumeClaimTemplates:
+    - metadata:
+       name: data
+       labels:
+         env: prod
+     spec:
+       accessModes: ["ReadWriteOnce"]
+       storageClassName: "fast" # StorageOS storageClass 
+       resources:
+         requests:
+           storage: 5Gi
+    ```
+    This excerpt is from the StatefulSet definition. This file contains the
+    VolumeClaim template that will dynamically provision storage, using the
+    StorageOS storage class. Dynamic provisioning occurs as a volumeMount has
+    been declared with the same name as a Volume Claim.
 
 1. Move into the Redis examples folder and create the objects
 

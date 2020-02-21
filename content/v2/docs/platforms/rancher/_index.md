@@ -14,9 +14,5 @@ Linux distributions detailed in the [systems supported page]({{< ref
 "docs/prerequisites/systemconfiguration.md" >}}) if the appropriate kernel
 modules are present.
 
-StorageOS integrates transparently with Kubernetes. The user can provide
-standard PVC definitions and StorageOS will dynamically provision them.
-StorageOS presents volumes to containers with standard POSIX mount targets.
-This enables the Kubelet to mount StorageOS volumes using standard linux device
-files. Checkout [device presentation]({{< ref
-"docs/prerequisites/systemconfiguration.md" >}}) for more details.
+{{% include "content/kubernetes-with-storageos.md" %}}
+{{% include "content/csi-note.md" %}}

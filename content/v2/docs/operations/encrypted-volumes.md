@@ -57,12 +57,14 @@ used to store the encryption keys.
 
 StorageOS will create one secret per encrypted volume and the secrets are
 created in whatever namespace StorageOS is installed into.
+
 ```bash
 $ kubectl get secrets -n storageos
 NAME                                           TYPE                                  DATA   AGE
 ns-key.default                                 Opaque                                1      20h
 vol-key.4276fc07-7d85-70bf-35a0-f0b005e55e0f   Opaque                                4      1m
 ```
+
 In the output above there is a `ns-key.default` and a `vol-key.`
 >A `ns-key` is created for each [StorageOS namespace](/docs/concepts/namespaces)
 >in the format `ns-key.{namespace}`. A `vol-key` is created for every encrypted
@@ -70,16 +72,16 @@ In the output above there is a `ns-key.default` and a `vol-key.`
 >retrieved by inspecting the volume.
 
 ```bash
-title: Find the PVC name
+# Find the PVC name
 $ kubectl get pvc --show-labels
 NAME      STATUS   VOLUME                                     STORAGECLASS   AGE   LABELS
 pvc0002   Bound    pvc-1c68f013-40dd-11e9-91ad-0a57700a78b4   fast           10m   storageos.com/encryption=true
 
-title: Inspect the volume and find the volume ID
+# Inspect the volume and find the volume ID
 $ storageos volume inspect default/pvc-1c68f013-40dd-11e9-91ad-0a57700a78b4 | grep -m1 id
         "id": "4276fc07-7d85-70bf-35a0-f0b005e55e0f",
 
-title: Find the secret for PVC pvc0002
+# Find the secret for PVC pvc0002
 $ kubectl get secret vol-key.4276fc07-7d85-70bf-35a0-f0b005e55e0f
 NAME                                           TYPE     DATA   AGE
 vol-key.4276fc07-7d85-70bf-35a0-f0b005e55e0f   Opaque   4      12m

@@ -54,7 +54,7 @@ StorageOS will use the new available space to create new data files.
 
     Check StorageOS cluster's available capacity.
     ```
-    root@ip-172-20-58-239:~# storageos node ls --format="table {{ "{{.Name"}}}}\t{{ "{{.Capacity"}}}}"
+    root@ip-172-20-58-239:~# storageos node ls --format="table {{.Name}}\t{{.Capacity}}"
     NAME                                          TOTAL
     ip-172-20-119-113.eu-west-1.compute.internal  128.7GB
     ip-172-20-58-239.eu-west-1.compute.internal   128.7GB
@@ -89,7 +89,7 @@ StorageOS will use the new available space to create new data files.
     In less than 30 seconds, StorageOS will see the new available capacity.
 
     ```
-    root@ip-172-20-58-239:~# storageos node ls --format="table {{ "{{.Name"}}}}\t{{ "{{.Capacity"}}}}"
+    root@ip-172-20-58-239:~# storageos node ls --format="table {{.Name}}\t{{.Capacity}}"
     NAME                                          TOTAL
     ip-172-20-119-113.eu-west-1.compute.internal  128.7GB
     ip-172-20-58-239.eu-west-1.compute.internal   227.3GB
@@ -133,7 +133,7 @@ This option enables operators to take advantage of LVM to manage disks.
 
     Check StorageOS cluster's available capacity.
     ```
-    root@ip-172-20-84-11:~# storageos node ls --format="table {{ "{{.Name"}}}}\t{{ "{{.Capacity"}}}}"
+    root@ip-172-20-84-11:~# storageos node ls --format="table {{.Name}}\t{{.Capacity}}"
     NAME                                          TOTAL
     ip-172-20-119-113.eu-west-1.compute.internal  128.7GB
     ip-172-20-58-239.eu-west-1.compute.internal   128.7GB
@@ -187,7 +187,7 @@ This option enables operators to take advantage of LVM to manage disks.
 
     StorageOS available storage has increased too.
     ```
-    root@ip-172-20-84-11:~# storageos node ls --format="table {{ "{{.Name"}}}}\t{{ "{{.Capacity"}}}}"
+    root@ip-172-20-84-11:~# storageos node ls --format="table {{.Name}}\t{{.Capacity}}"
     NAME                                          TOTAL
     ip-172-20-119-113.eu-west-1.compute.internal  128.7GB
     ip-172-20-58-239.eu-west-1.compute.internal   128.7GB

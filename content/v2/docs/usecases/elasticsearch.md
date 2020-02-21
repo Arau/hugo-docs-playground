@@ -22,7 +22,7 @@ replication is required.
 
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes
 cluster. [See our guide on how to install StorageOS on Kubernetes for more
-information]({{< ref "docs/platforms/kubernetes/install/_index.md" >}}).
+information]({{< ref "docs/platforms/kubernetes/install.md" >}}).
 
 ## Deploying Elasticsearch on Kubernetes
 
@@ -42,16 +42,12 @@ that there may be collisions with other application settings. Administrators
 are advised to centrally collate sysctl settings using the tooling of their
 choice.
 
-### Deployment
-
-&nbsp;
-
+### Deployment of the application
 
 #### StatefulSet defintion
 
-&nbsp;
 
-  ```yaml
+```yaml
 ---
 apiVersion: apps/v1
 kind: StatefulSet
@@ -94,25 +90,10 @@ provision the necessary storage, using the StorageOS storage class.
 Dynamic provisioning occurs as a volumeMount has been declared with the same
 name as a VolumeClaimTemplate.
 
-## Prerequisites
 
-Some OS tuning is required, which is done automatically when using our example
-from the [deploy](//github.com/storageos/deploy) repository.
-
-Elasticsearch requires `vm.max_map_count` to be increased to a minimum of
-`262144`, which is a system wide setting. One way to achieve this is to
-run `sysctl -w vm.max_map_count=262144` and update `/etc/sysctl.conf`
-to ensure it persists over a reboot. See ElasicSearch reference
-[here](https://www.elastic.co/guide/en/elasticsearch/reference/7.0/vm-max-map-count.html)
-
-Administrators should be aware that this impacts the behaviour of nodes and
-that there may be collisions with other application settings. Administrators
-are advised to centrally collate sysctl settings using the tooling of their
-choice.
-
+## Installation
 #### Clone the use cases repo
 
-&nbsp;
 
 You can find the latest files in the StorageOS use cases repostiory
 in `/elasticsearch/`
@@ -122,21 +103,17 @@ git clone https://github.com/storageos/use-cases.git storageos-usecases
 cd storageos-usecases
 ```
 
-&nbsp;
-
-## Installation
-
 1. Create the kubernetes objects
-   
-   
-   > NOTE: this will install an ES cluster with 3 master, 3 data and 3
-   coordinator nodes. Combined they will require ~ 14 GiB of available memory in
-   your cluster, however, more may be used as the application is being used
-   
-     ```bash
-   kubectl apply -f ./elasticsearch/
-     ```
-   
+
+
+    This will install an ES cluster with 3 master, 3 data and 3 coordinator
+    nodes. Combined they will require ~ 14 GiB of available memory in your
+    cluster, however, more may be used as the application is being used
+
+    ```bash
+    kubectl apply -f ./elasticsearch/
+    ```
+
    Once completed, an internal service object will have been created making the
    cluster available as `http://elasticsearch:9200/` which is the default Kibana
    (when installed via Helm) will be using.
@@ -146,7 +123,7 @@ cd storageos-usecases
 
    ```bash
    kubectl get pods -l component=elasticsearch
-   
+
    NAME                                    READY   STATUS    RESTARTS   AGE
    elasticsearch-exporter-d86ffd94-zw45l   1/1     Running   0          5m44s
    es-coordinator-b7b984dd4-7wlz5          1/1     Running   0          5m44s
