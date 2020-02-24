@@ -2,12 +2,21 @@
 
 WIP
 
+## Dependencies
+
+- [Dapper](https://github.com/rancher/dapper)
+- Docker
+
 ## Configuration
+
 The configuration files are in `./config`. For every version of the site a new
 configuration file can be added in the format of `vX.X.X.toml` or
 `vX.X.X.yaml`.
 
 ## How to run a local server
+
+> The base image defined in the `Dockerfile.dapper` is pulled from a private
+> repository. You can build your own image from `Dockerfile.build`.
 
 To run the site locally execute:
 
