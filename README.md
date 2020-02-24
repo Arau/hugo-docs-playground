@@ -24,11 +24,11 @@ pass parameters as follows.
 
 ```bash
 # Serve from a different port
-make serve port=8888
+make port=8888 serve
 
 # or 
 
-make serve config=./config/v2.0.0.toml
+make config=./config/v2.0.0.toml serve
 ```
 
 > The default config file to serve is set at the top of the Makefile
