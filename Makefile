@@ -1,4 +1,7 @@
-cmd="hugo"
+DAPPER_ENV	?=
+DAPPER_ARGS	?=
+DAPPER_RUN	= env $(DAPPER_ENV) dapper --keep --mode bind $(DAPPER_ARGS)
+
 port="1313"
 bind="0.0.0.0"
 conf="./config/v1.5.3.toml" # set the default one
@@ -7,8 +10,11 @@ conf="./config/v1.5.3.toml" # set the default one
 
 all: clean build serve
 
-serve: 
-	${cmd} server --renderToDisk --forceSyncStatic --debug --verbose --config ${conf} --bind ${bind} --port ${port}
+serve:
+	$(DAPPER_RUN) -- server --renderToDisk --forceSyncStatic --debug --verbose --config ${conf} --bind ${bind} --port ${port}
 
 build:
 	@./build/generate-site-output.sh ${conf}
+
+clean:
+	rm -rf sites/stable/public/*
