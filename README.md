@@ -6,7 +6,6 @@ WIP
 
 - [Dapper](https://github.com/rancher/dapper)
 - Docker
-- Git Submodule for the theme in ssh://git@code.storageos.net:7999/pre/docs-v2-theme.git. The theme is base on https://github.com/google/docsy.git
 
 ## Configuration
 
@@ -42,3 +41,9 @@ make config=./config/v2.0.0.toml serve
 ```
 
 > The default config file to serve is set at the top of the Makefile
+
+
+## Misc
+
+The theme use is based on https://github.com/google/docsy.git even though is
+treated as part of the repository instead of a submodule. 
