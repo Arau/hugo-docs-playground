@@ -99,15 +99,10 @@ offlineSearch = true
 
 # User interface configuration
 [params.ui]
-# Enable to show the side bar menu in its compact state.
 sidebar_menu_compact = true
-#  Set to true to disable breadcrumb navigation.
 breadcrumb_disable = false
-#  Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
-sidebar_search_disable = false
-#  Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top nav bar
+sidebar_search_disable = true
 navbar_logo = true
-# Set to true to disable the About link in the site footer
 footer_about_disable = false
 
 # Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
@@ -155,10 +150,10 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
         desc = "Discuss development issues around the project"
 
 [[params.versions]]
-	version = "v1"
+	version = "v1.x"
 	url = '/'
 [[params.versions]]
-	version = "v2"
+	version = "v2.0"
 	url = '/v2'
 
 [[menu.main]]

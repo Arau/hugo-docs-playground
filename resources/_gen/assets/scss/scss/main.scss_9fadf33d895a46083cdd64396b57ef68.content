@@ -10,8 +10,12 @@ Add styles or override variables from the theme here.
 .td-navbar-nav-scroll .navbar-nav li a {
   text-shadow: none;
   margin-right: 30px;
-  padding: 35px 0;
-  margin-left: 0; }
+  padding: 0;
+  margin-left: 0;
+  font-size: 15px; }
+
+.td-sidebar-nav a {
+  font-size: 16px; }
 
 /*
 .navbar-custom li a {
