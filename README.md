@@ -6,6 +6,7 @@ WIP
 
 - [Dapper](https://github.com/rancher/dapper)
 - Docker
+- Git Submodule for the theme in ssh://git@code.storageos.net:7999/pre/docs-v2-theme.git. The theme is base on https://github.com/google/docsy.git
 
 ## Configuration
 
