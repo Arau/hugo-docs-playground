@@ -1,39 +1,68 @@
 {{ $links := .Site.Params.links }}
-<footer class="bg-dark py-5 row d-print-none">
+<footer class="row d-print-none">
   <div class="container-fluid mx-sm-5">
     <div class="row">
-      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
-        {{ with $links }}
-        {{ with index . "user"}}
-        {{ template "footer-links-block"  . }}
-        {{ end }}
-        {{ end }}
+      <div class="col-2">
       </div>
-      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
-        {{ with $links }}
-        {{ with index . "developer"}}
-        {{ template "footer-links-block"  . }}
-        {{ end }}
-        {{ end }}
+      <div class="col">
+          <div class="footer-nav-column">
+              <h3 class="widget-title">Product</h3>
+              <ul>
+                <li><a href="https://storageos.com/product">Overview</a></li>
+                <li><a href="https://storageos.com/features">Features</a></li>
+                <li><a href="https://storageos.com/use-cases">Use cases</a></li>
+                <li><a href="https://storageos.com/why-storageos">Why StorageOS</a></li>
+                <li><a href="https://storageos.com/how-it-works">How it works</a></li>
+                <li><a href="https://storageos.com/how-it-works/#faq">FAQ</a></li>
+            </ul>
+          </div>
       </div>
-      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        {{ with .Site.Params.copyright }}<small class="text-white">&copy; {{ now.Year}} {{ .}} {{ T "footer_all_rights_reserved" }}</small>{{ end }}
-        {{ with .Site.Params.privacy_policy }}<small class="ml-1"><a href="{{ . }}" target="_blank">{{ T "footer_privacy_policy" }}</a></small>{{ end }}
-	{{ if not .Site.Params.ui.footer_about_disable }}
-		{{ with .Site.GetPage "about" }}<p class="mt-2"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>{{ end }}
-	{{ end }}
+      <div class="col">
+          <div class="footer-nav-column">
+              <h3 class="widget-title">Solutions</h3>
+              <ul>
+                  <li><a href="https://storageos.com/developers">Developers</a></li>
+                  <li><a href="https://storageos.com/infrastructure-managers">Infrastructure
+                          Managers</a></li>
+                  <li><a href="https://storageos.com/cloud">Cloud</a></li>
+              </ul>
+
+          </div>
+      </div>
+      <div class="col">
+          <div class="footer-nav-column">
+              <h3 class="widget-title">Docs</h3>
+              <ul id="menu-footer-docs" class="menu">
+                  <li><a href="https://docs.storageos.com">Overview</a></li>
+                  <li><a href="https://support.storageos.com">Support</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="col">
+          <h3 class="widget-title">Company</h3>
+          <ul>
+              <li><a href="https://storageos.com/company">About</a></li>
+              <li><a href="https://storageos.com/leadership">Leadership</a></li>
+              <li><a href="https://storageos.com/careers">Careers</a></li>
+              <li><a href="https://storageos.com/news">News</a></li>
+              <li><a href="https://storageos.com/events">Events</a></li>
+              <li><a href="https://storageos.com/contact">Contact</a></li>
+              <li><a href="https://storageos.com/media">Media</a></li>
+              <li><a href="https://storageos.com/privacy">Legal</a></li>
+          </ul>
+      </div>
+      <div class="col">
+          <h3 class="widget-title">Learn</h3>
+          <ul>
+              <li><a href="https://storageos.com/blog">Blog</a></li>
+              <li><a href="https://play.storageos.com">play.storageos.com</a></li>
+              <li><a href="https://storageos.com/resources">Resources</a></li>
+              <li><a href="https://resources.storageos.com/demo-request">Get a
+                      demo</a></li>
+          </ul>
+      </div>
+      <div class="col-2">
       </div>
     </div>
   </div>
 </footer>
-{{ define "footer-links-block" }}
-<ul class="list-inline mb-0">
-  {{ range . }}
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="{{ .name }}" aria-label="{{ .name }}">
-    <a class="text-white" target="_blank" href="{{ .url }}">
-      <i class="{{ .icon }}"></i>
-    </a>
-  </li>
-  {{ end }}
-</ul>
-{{ end }}
