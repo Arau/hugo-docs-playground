@@ -12613,11 +12613,9 @@ readers do not read off random characters that represent icons */
     border-style: solid;
     border-color: #403F4C; }
 
-footer {
-  min-height: 150px; }
-  @media (max-width: 991.98px) {
-    footer {
-      min-height: 200px; } }
+@media (max-width: 991.98px) {
+  footer {
+    min-height: 200px; } }
 
 @media (min-width: 768px) {
   .td-offset-anchor:target {
