@@ -15,6 +15,7 @@ publishDir = "sites/stable/public/v2"
 contentDir = "content/v2"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
+
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
 

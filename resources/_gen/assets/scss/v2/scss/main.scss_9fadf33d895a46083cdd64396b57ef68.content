@@ -10,46 +10,13 @@ Add styles or override variables from the theme here.
 .td-navbar-nav-scroll .navbar-nav li a {
   text-shadow: none;
   margin-right: 30px;
-  padding: 35px 0;
-  margin-left: 0; }
-
-/*
-.navbar-custom li a {
-  background-color: #ff5500;
-  border-bottom: 5px solid #fff;
-  color: #4a5165;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 25px;
-  margin-right: 30px;
-  padding: 35px 0;
+  padding: 0;
   margin-left: 0;
-}
+  font-size: 15px; }
 
+.td-sidebar-nav a {
+  font-size: 16px; }
 
-.nav-link span {
-  border-bottom: 5px solid #fff;
-  color: #4a5165;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 25px;
-  margin-right: 30px;
-  padding: 35px 0;
-  margin-left: 0;
-}
-  
-.td-navbar-nav-scroll .navbar-nav li a {
-  border-bottom: 5px solid #fff;
-  color: #4a5165;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 25px;
-  margin-right: 30px;
-  padding: 35px 0;
-  margin-left: 0;
-}
-
-*/
 /*
 
 Bootstrap variables overrides for theme.
@@ -2164,7 +2131,7 @@ input[type="button"].btn-block {
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 10rem;
+  min-width: 0rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
@@ -2173,7 +2140,7 @@ input[type="button"].btn-block {
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 10px solid white;
   border-radius: 0.25rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175); }
 
@@ -12646,11 +12613,9 @@ readers do not read off random characters that represent icons */
     border-style: solid;
     border-color: #403F4C; }
 
-footer {
-  min-height: 150px; }
-  @media (max-width: 991.98px) {
-    footer {
-      min-height: 200px; } }
+@media (max-width: 991.98px) {
+  footer {
+    min-height: 200px; } }
 
 @media (min-width: 768px) {
   .td-offset-anchor:target {
