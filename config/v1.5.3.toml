@@ -146,18 +146,25 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 	version = "v2.0"
 	url = '/v2'
 
-[[menu.main]]
-    name = "Product"
-    weight = -100
-[[menu.main]]
-    name = "Solutions"
-    weight = -80
-[[menu.main]]
-    name = "Docs"
-    weight = -60
-[[menu.main]]
-    name = "Company"
-    weight = -40
-[[menu.main]]
-    name = "Learn"
-    weight = -20
+# Main menu needs dropdown sections. It has been built with a specific template
+# available in layouts/partials/navbar.html
+
+#[[menu.main]]
+    #name = "Product"
+    #weight = -100
+#[[params.mainmenu.product]]
+    #name = "Overview"
+#[[params.mainmenu.product]]
+    #name = "Features"
+#[[menu.main]]
+    #name = "Solutions"
+    #weight = -80
+#[[menu.main]]
+    #name = "Docs"
+    #weight = -60
+#[[menu.main]]
+    #name = "Company"
+    #weight = -40
+#[[menu.main]]
+    #name = "Learn"
+    #weight = -20
