@@ -12,10 +12,9 @@ Add styles or override variables from the theme here.
   margin-right: 30px;
   padding: 0;
   margin-left: 0;
-  font-size: 15px; }
-
-.td-sidebar-nav a {
-  font-size: 16px; }
+  font-size: 16px;
+  font-weight: 700;
+  color: #4a5165 !important; }
 
 /*
 
@@ -12327,17 +12326,20 @@ readers do not read off random characters that represent icons */
     .td-sidebar-nav__section-title .active {
       font-weight: 700; }
     .td-sidebar-nav__section-title a {
-      color: #222; }
+      color: #4a5165; }
   .td-sidebar-nav .td-sidebar-link {
     display: block;
-    padding-bottom: 0.375rem; }
+    padding-bottom: 0.375rem;
+    font-size: 16px;
+    font-weight: 700; }
     .td-sidebar-nav .td-sidebar-link__page {
-      color: #495057;
-      font-weight: 300; }
+      color: #4a5165;
+      font-weight: 500; }
   .td-sidebar-nav a:hover {
     color: #72A1E5;
     text-decoration: none; }
   .td-sidebar-nav a.active {
+    color: #55af00;
     font-weight: 700; }
   .td-sidebar-nav .dropdown a {
     color: #495057; }
