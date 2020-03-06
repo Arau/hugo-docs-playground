@@ -10,11 +10,28 @@ Add styles or override variables from the theme here.
 .td-navbar-nav-scroll .navbar-nav li a {
   text-shadow: none;
   margin-right: 30px;
-  padding: 0;
   margin-left: 0;
   font-size: 16px;
   font-weight: 700;
   color: #4a5165 !important; }
+
+.td-navbar {
+  border-bottom: 1px solid #ddd; }
+
+.navbar {
+  padding: 0rem 0.5rem 0rem 1rem !important; }
+
+.navbar-nav .dropdown-menu {
+  margin-top: 20px;
+  border: 1px solid #ddd; }
+
+.dropdown-menu {
+  left: auto;
+  margin-top: 1rem; }
+  .dropdown-menu .show {
+    margin-top: 10px; }
+  .dropdown-menu .dropdown-item {
+    padding: 0.9rem 0rem 0rem 1rem; }
 
 /*
 
