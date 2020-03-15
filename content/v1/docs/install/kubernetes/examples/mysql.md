@@ -1,16 +1,17 @@
 ---
-title: Redis
+title: MySQL
 ---
 
-# ![image](/images/docs/explore/redislogo.png) Redis with StorageOS
+# ![image](/images/docs/explore/mysqllogo.png) MySQL with StorageOS
 
-Redis is a popular networked, in-memory, key-value data store with optional durability to disk.
+MySQL is a popular SQL open source database for a wide range of popular
+web-based applications including WordPress.
 
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes
 cluster. [See our guide on how to install StorageOS on Kubernetes for more
-information]({{< ref "docs/platforms/kubernetes/install.md" >}})
+information]({{< ref "docs/install/kubernetes/install.md" >}})
 
-## Deploying Redis on Kubernetes
+## Deploying MySQL on Kubernetes
 
 1. You can find the latest files in the StorageOS example deployment repostiory
    ```bash
@@ -18,23 +19,27 @@ information]({{< ref "docs/platforms/kubernetes/install.md" >}})
    ```
    StatefulSet defintion
   ```yaml
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
- name: redis
+ name: mysql
 spec:
  selector:
    matchLabels:
-     app: redis
+     app: mysql
      env: prod
- serviceName: redis
+ serviceName: mysql
  replicas: 1
  ...
  spec:
-     serviceAccountName: redis
+     serviceAccountName: mysql
       ...
       volumeMounts:
        - name: data
-         mountPath: /bitnami/redis/data
+         mountPath: /var/lib/mysql
+         subPath: mysql
+       - name: conf
+         mountPath: /etc/mysql/mysql.conf.d
    ...
 volumeClaimTemplates:
  - metadata:
@@ -53,31 +58,31 @@ volumeClaimTemplates:
    StorageOS storage class. Dynamic provisioning occurs as a volumeMount has
    been declared with the same name as a VolumeClaim.
 
-1. Move into the Redis examples folder and create the objects
+1. Move into the MySQL examples folder and create the objects
 
    ```bash
    cd storageos
-   kubectl create -f ./k8s/examples/redis
+   kubectl create -f ./k8s/examples/mysql
    ```
 
-1. Confirm Redis is up and running.
+1. Confirm MySQL is up and running.
 
    ```bash
-   $ kubectl get pods -w -l app=redis
+   $ kubectl get pods -w -l app=mysql
    NAME        READY    STATUS    RESTARTS    AGE
-   redis-0     1/1      Running    0          1m
+   mysql-0     1/1      Running    0          1m
    ```
 
-1. Connect to the Redis client pod and connect to the Redis server through the
+1. Connect to the MySQL client pod and connect to the MySQL server through the
    service
    ```bash
-    $ kubectl exec -it redis-0 -- redis-cli -a password
-    Warning: Using a password with '-a' option on the command line interface may not be safe.
-    127.0.0.1:6379> CONFIG GET maxmemory
-    1) "maxmemory"
-    2) "0"
-    ```
+   $ kubectl exec client -- mysql -h mysql-0.mysql -e "show databases;"
+   Database
+   information_schema
+   mysql
+   performance_schema
+   ```
 
 ## Configuration
 
-If you need custom startup options, you can edit the ConfigMap with your desired Redis configuration settings.
+If you need custom startup options, you can edit the ConfigMap with your desired MySQL configuration settings.

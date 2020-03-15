@@ -26,7 +26,7 @@ launch a shell inside the KubeVirt VM that's running as a Kubernetes pod.
 
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes
 cluster. [See our guide on how to install StorageOS on Kubernetes for more
-information]({{< ref "docs/platforms/kubernetes/install.md" >}}).
+information]({{< ref "docs/install/kubernetes/install.md" >}}).
 
 ## Prerequisites
 

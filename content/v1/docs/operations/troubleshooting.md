@@ -6,8 +6,8 @@ linkTitle: Troubleshooting installation
 
 We provide platform specific troubleshooting information in the following sections:
 
-- [Kubernetes]({{< ref "docs/platforms/kubernetes/troubleshoot/_index.md" >}})
-- [Openshift]({{< ref "docs/platforms/openshift/troubleshoot/_index.md" >}})
+- [Kubernetes]({{< ref "docs/install/kubernetes/troubleshoot/_index.md" >}})
+- [Openshift]({{< ref "docs/install/openshift/troubleshoot/_index.md" >}})
 
 ## Common Platform Agnostic Issues
 

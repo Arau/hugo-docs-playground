@@ -1,6 +1,6 @@
 ---
-title: "Platforms"
-linkTitle: "Platforms"
+title: "Install"
+linkTitle: "Install"
 weight: 400
 description: >
   StorageOS is platform agnostic, however, there are details on different

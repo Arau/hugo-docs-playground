@@ -40,7 +40,7 @@ StorageOS using the Rancher application install.
     > installation. To customize the installation further, set `Install StorageOS
     > Cluster` to false and use a [yaml definition for the StorageOSCluster
     > Custom
-    > Resource](/docs/platforms/rancher/install/rancher-catalog#custom-resource-definition).
+    > Resource](/docs/install/rancher/install/rancher-catalog#custom-resource-definition).
 
     &nbsp;
 

@@ -8,7 +8,7 @@ chart-version: 0.2.x
 > __Only installations of StorageOS with CSI are supported for EKS.__
 
 > Visit the [best practices page](
-> {{< ref "docs/platforms/aws-eks/bestpractices.md" >}}) for production
+> {{< ref "docs/install/aws-eks/bestpractices.md" >}}) for production
 > deployment advice.
 
 &nbsp;

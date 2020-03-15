@@ -70,7 +70,7 @@ $ storageos user rm jim
 
 When installing with the StorageOS Operator, the StorageOS API account is
 defined by the [storageos-api
-secret](/docs/platforms/kubernetes/install/1.13#create-a-secret).
+secret](/docs/install/kubernetes/install/1.13#create-a-secret).
 
 For installations using the native driver, Kubernetes uses the account defined
 in the secret to authenticate against the StorageOS API. Therefore if the

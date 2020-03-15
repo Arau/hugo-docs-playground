@@ -8,7 +8,7 @@ Cassandra is a popular distributed NoSQL open source database.
 
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes
 cluster. [See our guide on how to install StorageOS on Kubernetes for more
-information]({{< ref "docs/platforms/kubernetes/install.md" >}})
+information]({{< ref "docs/install/kubernetes/install.md" >}})
 
 ## Deploying Cassandra on Kubernetes
 
