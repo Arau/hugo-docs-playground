@@ -91,9 +91,17 @@ OperatorHub. You can install the StorageOS operator through the OperatorHub.
 
     ![install-9](/images/openshift4/stos-running.png)
 
-1. {% include platforms/openshift4-selinux.md %}
+1. Set SELinux Permissions
 
+    The StorageOS CSI helper needs to mount a CSI Socket into the container so
+    on each node add the `svirt_sandbox_file_t` flag to the CSI socket directory
+    and CSI socket.
+
+    ```
+    chcon -Rt svirt_sandbox_file_t /var/lib/kubelet/plugins_registry/storageos
+    ```
 &nbsp;
+
 If this is your first installation you may wish to follow the [StorageOS
 Volume guide](/docs/platforms/{{ $platform }}/firstvolume/) for an example of how
 to mount a StorageOS volume in a Pod.

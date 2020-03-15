@@ -31,7 +31,7 @@ documentation.
 
 ## 1. Install StorageOS operator
 
-Install the StorageOS operator using the following yaml manifest.
+Install the StorageOS Cluster Operator using the following yaml manifest.
 
 ```bash
 {{ $cmd }} create -f https://github.com/storageos/cluster-operator/releases/download/{{ .Site.Params.latest_operator_version }}/storageos-operator.yaml
@@ -118,13 +118,21 @@ spec:
 
 ### Verify StorageOS Installation
 
+{{- if or (eq $platform "openshift") (in $sched_version "3.11 3.9") }}
 ```bash
+[root@master03]# {{ $cmd }} -n storageos get pods -w
+NAME                                    READY   STATUS    RESTARTS   AGE
+storageos-daemonset-75f6c               1/1     Running   0          3m
+storageos-daemonset-czbqx               1/1     Running   0          3m
+storageos-daemonset-zv4tq               1/1     Running   0          3m
+{{- else }}
 [root@master03]# {{ $cmd }} -n storageos get pods -w
 NAME                                    READY   STATUS    RESTARTS   AGE
 storageos-daemonset-75f6c               3/3     Running   0          3m
 storageos-daemonset-czbqx               3/3     Running   0          3m
 storageos-daemonset-zv4tq               3/3     Running   0          3m
 storageos-scheduler-6d67b46f67-5c46j    1/1     Running   6          3m
+{{- end }}
 
 ```
 
