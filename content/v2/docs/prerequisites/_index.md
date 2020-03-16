@@ -16,6 +16,7 @@ One machine with the following:
 1. Docker 1.10 or later, with [mount propagation]({{< ref "docs/prerequisites/mountpropagation.md" >}}) enabled and preferably `CHANNEL=stable`.
 1. The necessary ports should be open. See the [ports and firewall settings]({{< ref "docs/prerequisites/firewalls.md" >}}).
 1. A mechanism for [device presentation]({{< ref "docs/prerequisites/systemconfiguration.md" >}}).
+1. Access to a single node [etcd cluster]({{< ref "docs/prerequisites/etcd.md" >}}).
 
 
 ## Recommended:
@@ -28,3 +29,4 @@ One machine with the following:
 1. System clocks synchronized using NTP or similar methods. While our
    distributed consensus algorithm does not require synchronised clocks, it
    does help to more easily correlate logs across multiple nodes.
+1. A highly available multi-member [etcd cluster]({{< ref "docs/prerequisites/etcd.md" >}}).
