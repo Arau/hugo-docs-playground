@@ -1,4 +1,4 @@
-baseURL = "/v2"
+baseURL = "http://0.0.0.0/v2"
 title = "StorageOS Documentation"
 
 enableRobotsTXT = true

@@ -37,7 +37,8 @@ make port=8888 serve
 
 # or 
 
-make config=./config/v2.0.0.toml serve
+make conf=./config/v2.0.0.toml baseurl="http://mymachine.storageos.net/v2" serve
+# access to http://mymachine.storageos.net:1313/v2 in your browser
 ```
 
 > The default config file to serve is set at the top of the Makefile
