@@ -59,5 +59,4 @@ redirect_from: /docs/install/kubernetes
 {{% /tab %}}
 {{< /tabs >}}
 
-
 {{% include "content/first-volume.md" %}}

@@ -13,3 +13,4 @@ redirect_from: /docs/install/dockeree
 
 {{% operator-install cmd="kubectl" platform="dockeree" sched_version="1.14" %}}
 
+{{% include "content/first-volume.md" %}}

@@ -38,3 +38,5 @@ platform-pretty: "OpenShift"
 
 {{% /tab %}}
 {{< /tabs >}}
+
+{{% include "content/first-volume.md" %}}

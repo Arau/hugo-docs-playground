@@ -14,3 +14,5 @@ chart-version: 0.2.x
 &nbsp;
 
 {{% operator-install cmd="kubectl" platform="aws-eks" sched_version="1.14" %}}
+
+{{% include "content/first-volume.md" %}}

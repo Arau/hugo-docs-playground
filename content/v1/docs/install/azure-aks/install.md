@@ -12,3 +12,5 @@ weight: 1
 &nbsp;
 
 {{% operator-install cmd="kubectl" platform="azure-aks" sched_version="1.14" %}}
+
+{{% include "content/first-volume.md" %}}

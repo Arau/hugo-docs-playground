@@ -1,15 +1,8 @@
 ---
-linkTitle: Rancher Catalog
-title: Rancher Catalog
+title: Install StorageOS
 weight: 1
-tags: [rancher, kubernets]
-platform: rancher
-platformUC: Rancher
-platform-pretty: "Rancher"
-sched_version: 1.13
-cmd: kubectl
-redirect_from: /docs/install/schedulers/rancher
-redirect_from: /docs/install/rancher
+redirect_from: /docs/install/schedulers/kubernetes
+redirect_from: /docs/install/kubernetes
 ---
 
 > Make sure the 
@@ -18,6 +11,10 @@ redirect_from: /docs/install/rancher
 
 &nbsp;
 
+{{< tabs tabTotal="2" tabID="1" tabHREFPrefix="rancher-" tabName1="catalog" tabName2="advanced" >}}
+{{% tab firstTab="true" tabRef="rancher-catalog" %}}
+
+# Rancher Catalog Install
 
 StorageOS is a Certified application in the [Rancher
 Catalog](https://rancher.com/docs/rancher/v2.x/en/catalog/). You can install
@@ -105,6 +102,72 @@ now create a Custom Resource that describes the StorageOS cluster.
     ![install-8](/images/rancher-ui-green-bubbles/rancher-8.png)
 
 
-    {% include operator/cr-rancher-ui.md %}
+    This is an example.
 
-{% include operator/first-volume.md  %}
+    ```bash
+    apiVersion: v1
+    kind: Secret
+    metadata:
+      name: "storageos-api"
+      namespace: "storageos-operator"
+      labels:
+        app: "storageos"
+    type: "kubernetes.io/storageos"
+    data:
+      # echo -n '<secret>' | base64
+      apiUsername: c3RvcmFnZW9z # Define your own user and password
+      apiPassword: c3RvcmFnZW9z
+    ---
+    apiVersion: "storageos.com/v1"
+    kind: StorageOSCluster
+    metadata:
+      name: "storageos"
+    spec:
+      k8sDistro: "rancher"
+      namespace: "kube-system"
+      secretRefName: "storageos-api" # Reference from the Secret created in the previous step
+      secretRefNamespace: "storageos-operator"  # Namespace of the Secret
+      csi:
+        enable: true
+        deploymentStrategy: "deployment"
+      images:
+        nodeContainer: "storageos/node:{{ site.latest_node_version }}" # StorageOS version
+    #  kvBackend:
+    #    address: 'storageos-etcd-client.etcd:2379' # Example address, change for your etcd endpoint
+    #    backend: 'etcd'
+      sharedDir: '/var/lib/kubelet/plugins/kubernetes.io~storageos' # Needed when Kubelet as a container
+      resources:
+        requests:
+          memory: "512Mi"
+      nodeSelectorTerms:
+        - matchExpressions:
+          - key: "node-role.kubernetes.io/worker"
+            operator: In
+            values:
+            - "true"
+    ```
+
+    > `spec` parameters available on the [Cluster Operator configuration](
+    > {%link _docs/reference/cluster-operator/configuration.md %}) page.
+
+    > You can find more examples such as deployments referencing a external etcd kv
+    > store for StorageOS in the [Cluster Operator examples](
+    > {%link _docs/reference/cluster-operator/examples.md %}) page.
+
+{{% /tab %}}
+{{% tab tabRef="rancher-advanced" %}}
+
+# Advanced installation
+
+This installation procedure is available in case of the default method is not
+suited to your requirements. The following procedure requires a higher
+number of actions to fulfil the installation of the StorageOS cluster in
+comparison with the default procedure. There is also a higher number of
+configuration parameters to be tuned.
+
+{{% operator-install cmd="kubectl" platform="kubernetes" sched_version="1.17" %}}
+
+{{% /tab %}}
+{{< /tabs >}}
+
+{{% include "content/first-volume.md" %}}
