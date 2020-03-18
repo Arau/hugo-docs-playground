@@ -3,6 +3,9 @@ title: Mount Propagation
 weight: 30
 ---
 
+> Modern versions of Kubernetes, Docker or other Container Runtimes enable
+> mount propagation by default.
+
 StorageOS requires mount propagation enabled to present devices as volumes for
 containers (see linux kernel documentation
 [here](http://man7.org/linux/man-pages/man2/mount.2.html)).
