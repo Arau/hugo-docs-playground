@@ -1,6 +1,6 @@
 ---
-title: Install StorageOS
-weight: 1
+title: Rancher
+weight: 30
 redirect_from: /docs/install/schedulers/kubernetes
 redirect_from: /docs/install/kubernetes
 ---
@@ -9,10 +9,17 @@ redirect_from: /docs/install/kubernetes
 > [prerequisites for StorageOS]({{< ref "docs/prerequisites/_index.md" >}}) are
 > satisfied before proceeding.
 
+> StorageOS transparently supports Rancher deployments using CentOS, RHEL,
+> Debian, Ubuntu or RancherOS (CSI is not supported on RancherOS) and can
+> support other Linux distributions detailed in the [systems supported
+> page]({{< ref "docs/prerequisites/systemconfiguration.md" >}}) if the
+> appropriate kernel modules are present.
+
+
 &nbsp;
 
-{{< tabs tabTotal="2" tabID="1" tabHREFPrefix="rancher-" tabName1="catalog" tabName2="advanced" >}}
-{{% tab firstTab="true" tabRef="rancher-catalog" %}}
+{{< tabs tabTotal="2" tabID="1" tabHREFPrefix="" tabName1="Catalog" tabName2="Advanced" >}}
+{{% tab firstTab="true" tabRef="catalog" %}}
 
 # Rancher Catalog Install
 
@@ -155,7 +162,7 @@ now create a Custom Resource that describes the StorageOS cluster.
     > {%link _docs/reference/cluster-operator/examples.md %}) page.
 
 {{% /tab %}}
-{{% tab tabRef="rancher-advanced" %}}
+{{% tab tabRef="advanced" %}}
 
 # Advanced installation
 

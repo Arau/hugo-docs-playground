@@ -2,10 +2,7 @@
 linkTitle: DockerEE
 title: Docker Enterprise Edition
 platform: dockeree
-platform-pretty: "DockerEE"
 ---
-
-This section of documentation covers the use of StorageOS in Docker Enterprise Edition.
 
 Docker EE and the Universal Control Plane can run on different Linux
 distributions. StorageOS supports RHEL, CentOS, Debian, and selected Ubuntu

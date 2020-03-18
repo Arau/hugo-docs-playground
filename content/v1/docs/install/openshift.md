@@ -1,7 +1,6 @@
 ---
-title: Install StorageOS
-weight: 1
-platform-pretty: "OpenShift"
+title: OpenShift
+weight: 20
 ---
 
 {{< tabs tabTotal="3" tabID="1" tabHREFPrefix="oc-" tabName1="4.x" tabName2="3.11" tabName3="3.9" >}}
