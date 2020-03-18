@@ -8,7 +8,7 @@ redirect_from: /docs/introduction/quick_start
 "docs/concepts/architecture.md" >}}) and [playing with a demo](http://play.storageos.com/main)
 
 * For production deployments, follow our installation guides for
-   [Kubernetes]({{< ref "docs/install/kubernetes/install" >}}),
+   [Kubernetes]({{< ref "docs/install/kubernetes.md" >}}),
   [OpenShift]({{< ref "docs/install/openshift/install" >}}) or 
   [Azure AKS]({{< ref "docs/install/azure-aks/install.md" >}}).
 

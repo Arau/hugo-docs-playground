@@ -22,7 +22,7 @@ replication is required.
 
 Before you start, ensure you have StorageOS installed and ready on a Kubernetes
 cluster. [See our guide on how to install StorageOS on Kubernetes for more
-information]({{< ref "docs/install/kubernetes/install.md" >}}).
+information]({{< ref "docs/install/kubernetes.md" >}}).
 
 ## Deploying Elasticsearch on Kubernetes
 
