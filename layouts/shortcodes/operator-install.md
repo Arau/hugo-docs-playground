@@ -118,23 +118,25 @@ spec:
 
 ### Verify StorageOS Installation
 
-{{- if or (eq $platform "openshift") (in $sched_version "3.11 3.9") }}
+{{- if or (eq $sched_version "3.11") (eq $sched_version "3.9") }}
+
 ```bash
 [root@master03]# {{ $cmd }} -n storageos get pods -w
 NAME                                    READY   STATUS    RESTARTS   AGE
 storageos-daemonset-75f6c               1/1     Running   0          3m
 storageos-daemonset-czbqx               1/1     Running   0          3m
 storageos-daemonset-zv4tq               1/1     Running   0          3m
+```
 {{- else }}
+```bash
 [root@master03]# {{ $cmd }} -n storageos get pods -w
 NAME                                    READY   STATUS    RESTARTS   AGE
 storageos-daemonset-75f6c               3/3     Running   0          3m
 storageos-daemonset-czbqx               3/3     Running   0          3m
 storageos-daemonset-zv4tq               3/3     Running   0          3m
 storageos-scheduler-6d67b46f67-5c46j    1/1     Running   6          3m
-{{- end }}
-
 ```
+{{- end }}
 
 > The above command watches the Pods created by the Cluster Definition example. Note that pods typically take approximately 65 seconds to enter the Running Phase.
 
