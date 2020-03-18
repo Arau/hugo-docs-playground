@@ -37,5 +37,6 @@ the node bootstrapping process. It must be set to one or more active nodes.
 > at the bootstrap process the next in the list will be queried.
 
 ### Solution:
-Define the `JOIN` variable according to the [discovery documentation]({%link
-_docs/reference/clusterdiscovery.md %}).
+
+Define the `JOIN` variable according to the [discovery documentation](
+{{ ref . "docs/reference/clusterdiscovery.md" }}).
