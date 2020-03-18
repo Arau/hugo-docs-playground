@@ -1,11 +1,11 @@
 ## Docker
 
-Some managed Kubernetes platforms enable the 'Live-Restore' Docker feature,
-enabling containers to continue running while Docker is stopped or upgraded.
-This feature can cause nodes to hang while shutting-down or rebooting, as
-rather than going through an orderly shutdown, StorageOS (and other processes)
-are killed before the disks are synced and unmounted.  Devices in this
-inaccessible state will log a warning similar to:
+Some managed Kubernetes platforms such as Azure AKS, enable the 'Live-Restore'
+Docker feature, enabling containers to continue running while Docker is stopped
+or upgraded. This feature can cause nodes to hang while shutting-down or
+rebooting, as rather than going through an orderly shutdown, StorageOS (and
+other processes) are killed before the disks are synced and unmounted.  Devices
+in this inaccessible state will log a warning similar to:
 
     Transport endpoint not connected
 

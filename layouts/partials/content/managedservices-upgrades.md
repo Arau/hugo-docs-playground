@@ -1,8 +1,7 @@
 {{ $platform := .Get "platform" }}
-## Kubernetes Upgrades
+## Kubernetes Upgrades on Managed Services
 
-Currently upgrading the Kubernetes version on {{ $platform }}
-**is not supported**. This is because nodes are replaced rather than being upgraded
-in place. As such manual relocation of data and etcd members is required. We
-are working with the {{ $platform }} team to improve the
-upgrade process to create a better user experience.
+Managed services that support in place upgrades are fully supported. However,
+upgrading Kubernetes using green/blue deployments **is not supported**. This is
+because nodes are replaced rather than being upgraded
+The data stored in the nodes is lost when new nodes replace the previous ones.

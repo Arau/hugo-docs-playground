@@ -8,3 +8,8 @@ description: >
   instructions to Install, Provision or Troubleshoot according to your
   providers.
 ---
+
+{{% include "content/kubernetes-with-storageos.md" %}}
+{{% include "content/csi-note.md" %}}
+{{% include "content/managedservices-upgrades.md" %}}
+{{% include "content/managedservices-docker.md" %}}

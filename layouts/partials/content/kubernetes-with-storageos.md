@@ -2,8 +2,9 @@
 
 ## Kubernetes with StorageOS
 
-StorageOS integrates transparently with Kubernetes. The user can provide
-standard PVC definitions and StorageOS will dynamically provision them.
+StorageOS integrates transparently with Kubernetes and all different
+distributions such as OpenShift, Rancher, EKS, AKS, GKE, etc. The user can
+provide standard PVC definitions and StorageOS will dynamically provision them.
 StorageOS presents volumes to containers with standard POSIX mount targets.
 This enables the Kubelet to mount StorageOS volumes using standard linux device
 files. Checkout [device presentation](

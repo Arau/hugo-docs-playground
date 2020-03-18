@@ -6,7 +6,7 @@ redirect_from: /docs/install/dockeree
 ---
 
 > Visit the [best practices page](
-> {{< ref "docs/install/azure-aks/bestpractices.md" >}}) for production
+> {{< ref "docs/best-practices.md" >}}) for production
 > deployment advice.
 
 &nbsp;

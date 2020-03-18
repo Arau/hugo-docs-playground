@@ -1,7 +1,6 @@
 ---
-title: Install StorageOS
+title: Kubernetes
 weight: 1
-chart-version: 0.2.x
 redirect_from: /docs/install/schedulers/kubernetes
 redirect_from: /docs/install/kubernetes
 ---
