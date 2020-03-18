@@ -35,7 +35,7 @@ Elasticsearch requires `vm.max_map_count` to be increased to a minimum of
 `262144`, which is a system wide setting. One way to achieve this is to
 run `sysctl -w vm.max_map_count=262144` and update `/etc/sysctl.conf`
 to ensure it persists over a reboot. See ElasicSearch reference
-[here](https://www.elastic.co/guide/en/elasticsearch/reference/7.0/vm-max-map-count.html)
+[here](https://www.elastic.co/guide/en/elasticsearch/reference/7.0/vm-max-map-count.html).
 
 Administrators should be aware that this impacts the behaviour of nodes and
 that there may be collisions with other application settings. Administrators
