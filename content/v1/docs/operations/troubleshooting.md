@@ -1,17 +1,24 @@
 ---
 title: Troubleshooting
-linkTitle: Troubleshooting installation
+linkTitle: Troubleshooting
 ---
 
+This section is aimed to help you determine issues in your cluster, whether they are related to the
+StorageOS installation, the integration with orchestrators or common misconfigurations.
 
-We provide platform specific troubleshooting information in the following sections:
+## Tools
 
-- [Kubernetes]({{< ref "docs/install/kubernetes/troubleshoot/_index.md" >}})
-- [Openshift]({{< ref "docs/install/openshift/troubleshoot/_index.md" >}})
+To be able to troubleshoot issues it is required to install the [StorageOS cli](https://github.com/storageos/go-cli).
 
-## Common Platform Agnostic Issues
-
-{% include troubleshoot/issues/newcluster-old-nodes.md %}
+{{% include "content/troubleshoot/mount-in-pod-stat.md" %}}
+{{% include "content/troubleshoot/pvc-pending-fail-to-dial.md" %}}
+{{% include "content/troubleshoot/pvc-pending-missing-secret.md" %}}
+{{% include "content/troubleshoot/common-install.md" %}}
+{{% include "content/troubleshoot/join-to-master-node.md" %}}
+{{% include "content/troubleshoot/lio-init.md" %}}
+{{% include "content/troubleshoot/lio-dataplane.md" %}}
+{{% include "content/troubleshoot/scc-missing.md" %}}
+{{% include "content/troubleshoot/newcluster-old-nodes.md" %}}
 
 ## Getting Help
 
