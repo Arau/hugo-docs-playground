@@ -1,7 +1,6 @@
 ---
 linkTitle: DockerEE
 title: Docker Enterprise Edition
-platform: dockeree
 ---
 
 Docker EE and the Universal Control Plane can run on different Linux
@@ -14,6 +13,3 @@ not those running Swarm. Mixed nodes (those running Kubernetes and Swarm
 workloads)  are also not supported.  As a consequence, StorageOS volumes can
 only be provisioned on Kubernetes nodes, and only these nodes should be used
 for stateful workloads.
-
-{{% include "content/kubernetes-with-storageos.md" %}}
-{{% include "content/csi-note.md" %}}
