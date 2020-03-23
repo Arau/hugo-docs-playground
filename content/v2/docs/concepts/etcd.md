@@ -3,9 +3,10 @@ title: "Etcd"
 ---
 ## What is etcd
 
-[etcd](https://etcd.io) is an open-source distributed, strongly consistent key value store that is
-used by StorageOS to durably persist the StorageOS cluster state. As the
-backing store for Kubernetes, StorageOS uses etcd for many of the same reasons.
+[etcd](https://etcd.io) is an open-source distributed, strongly consistent key
+value store that is used by StorageOS to durably persist the StorageOS cluster
+state. As the backing store for Kubernetes, StorageOS uses etcd for many of the
+same reasons.
 
 StorageOS uses etcd as the single source of truth for all StorageOS objects.
 Whenever a request is made to create, update or delete an object the result is

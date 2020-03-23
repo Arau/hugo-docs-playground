@@ -29,4 +29,4 @@ One machine with the following:
 1. System clocks synchronized using NTP or similar methods. While our
    distributed consensus algorithm does not require synchronised clocks, it
    does help to more easily correlate logs across multiple nodes.
-1. A highly available multi-member [etcd cluster]({{< ref "docs/prerequisites/etcd.md" >}}).
+1. A highly available multi-node [etcd cluster]({{< ref "docs/prerequisites/etcd.md" >}}).
