@@ -1,7 +1,6 @@
 ---
 title: "Architecture"
 linkTitle: "Architecture"
-url: "concepts/architecture/"
 ---
 
 StorageOS is a software-defined storage platform for running stateful
