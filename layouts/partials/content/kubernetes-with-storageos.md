@@ -7,8 +7,8 @@ such as OpenShift, Rancher, EKS, AKS, GKE, etc. The user can provide standard
 PVC definitions and StorageOS will dynamically provision matching volumes.
 StorageOS presents volumes to containers with standard POSIX mount targets.
 This enables the Kubelet to mount StorageOS volumes using standard linux device
-files. Checkout [device presentation]( {{ ref .
-"docs/prerequisites/systemconfiguration.md" }}) for more details.
+files. Checkout [device presentation](
+{{ ref . "docs/prerequisites/systemconfiguration.md" }}) for more details.
 
 Kubernetes and StorageOS communicate with each other to perform actions such as
 creation, deletion or mounting of volumes. The CSI (Container Storage
