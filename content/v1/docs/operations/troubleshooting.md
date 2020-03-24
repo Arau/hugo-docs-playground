@@ -18,7 +18,6 @@ To be able to troubleshoot issues it is required to install the [StorageOS cli](
 {{% include "content/troubleshoot/lio-init.md" %}}
 {{% include "content/troubleshoot/lio-dataplane.md" %}}
 {{% include "content/troubleshoot/scc-missing.md" %}}
-{{% include "content/troubleshoot/newcluster-old-nodes.md" %}}
 
 ## Getting Help
 

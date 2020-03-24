@@ -20,6 +20,8 @@ release cycles.
 CSI is in "Technology Preview and not for production workloads" in OpenShift
 3.11. **StorageOS recommends the use of CSI for OpenShift v4.**
 
+## StorageOS PersistentVolumeClaims
+
 The user can provide standard PVC definitions and StorageOS will dynamically
 provision them. StorageOS presents volumes to containers with standard POSIX
 mount targets. This enables the Kubelet to mount StorageOS volumes using
