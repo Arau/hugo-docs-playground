@@ -12,11 +12,11 @@ time="2018-09-24T13:40:20Z" level=info msg="retrying cluster join in 5 seconds..
 ```
 
 ### Reason:
-StorageOS uses a gossip protocol to discover the nodes in the cluster. When
+StorageOS uses a gossip protocol to discover nodes in the cluster. When
 StorageOS starts, one or more nodes can be referenced so new nodes can query
-existing ones for the list of members. This error indicates that the node can't
-connect to any of the nodes in the known list. The known list is defined in the
-`JOIN` variable.
+existing nodes for the list of members. This error indicates that the node
+can't connect to any of the nodes in the known list. The known list is defined
+in the `JOIN` variable.
 
 ### Assert:
 

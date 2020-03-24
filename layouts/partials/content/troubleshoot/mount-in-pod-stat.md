@@ -24,7 +24,7 @@ There are two main reasons this issue may arise:
 
 (Option 1) Misconfiguration of the DeviceDir/SharedDir
 
-Some Kubernetes distributions such as Rancher, Dockeree or some installations
+Some Kubernetes distributions such as Rancher, DockerEE or some installations
 of OpenShift deploy the Kubelet as a container, because of this, the device
 files that StorageOS creates to mount into the containers need to be visible to
 the kubelet. StorageOS can be configured to share the device directory.
@@ -95,8 +95,8 @@ disabled mount propagation is the cause.
 
 ### Solution:
 
-Older versions of Kubernetes need to enable mount propagation as it is not by default. 
-Most Kubernetes distributions allow to enable MountPropagation using
-FeatureGates. Rancher specifically, needs to enable it in the "View in
-API" section of your cluster. You need to edit the section
+Older versions of Kubernetes need to enable mount propagation as it is not
+enabled by default. Most Kubernetes distributions allow MountPropagation to be
+enabled using FeatureGates. Rancher specifically, needs to enable it in the
+"View in API" section of your cluster. You need to edit the section
 "rancherKubernetesEngineConfig" to enable the Kubelet feature gate.

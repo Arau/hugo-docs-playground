@@ -8,5 +8,5 @@ For production clusters, it is recommended to use dedicated instance groups for
 Stateful applications that allow the user to set different scaling policies and
 define StorageOS pools based on node selectors to collocate volumes.
 
-Loosing a few nodes at the same time could cause the loss of data even when
+Losing a few nodes at the same time could cause the loss of data even when
 volume replicas are being used.

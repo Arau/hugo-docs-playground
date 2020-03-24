@@ -9,10 +9,10 @@ time="2018-09-24T13:47:02Z" level=error msg="failed to start api" error="error v
 ### Reason:
 
 The StorageOS registration process to start the cluster uses the hostname of
-the node where StorageOS container is running, provided by the Kubelet.
+the node where the StorageOS container is running, provided by the Kubelet.
 However, StorageOS verifies the network hostname of the OS as a prestart check
-to make sure it can communicate with other nodes. If those 2 names don't match,
-StorageOS will remain unable to start.
+to make sure it can communicate with other nodes. If those names don't match,
+StorageOS will be unable to start.
 
 ### Solution:
 

@@ -1,5 +1,5 @@
-This installation procedure is available in case of the default method is not
-suited to your requirements. The following procedure requires a higher
-number of actions to fulfil the installation of the StorageOS cluster in
-comparison with the default procedure. There is also a higher number of
-configuration parameters to be tuned.
+This installation procedure is available in case the default method does not
+meet your requirements. The following procedure requires a higher number of
+actions to complete the installation of StorageOS in comparison with the
+default procedure. There are also a higher number of configuration parameters
+to be tuned.

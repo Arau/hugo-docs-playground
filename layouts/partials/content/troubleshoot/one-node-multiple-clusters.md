@@ -1,6 +1,6 @@
-## One node clusters 
+## One node clusters
 
-### Issue: 
+### Issue:
 StorageOS nodes have started creating multiple clusters of one node, rather
 than one cluster of many nodes.
 
@@ -28,7 +28,7 @@ variable to `localhost` or set to the value of the `ADVERTISE_IP`.
 > is explicitly defined.
 
 StorageOS uses the `JOIN` variable to discover other nodes in the cluster during
-the node bootstrapping process. It must be set to one or more active nodes. 
+the node bootstrapping process. It must be set to one or more active nodes.
 
 > You don't actually need to specify all the nodes. Once a new StorageOS node
 > can connect to a member of the cluster the gossip protocol discovers the

@@ -1,9 +1,9 @@
 ## (OpenShift) StorageOS pods missing -- DaemonSet error
 
-StorageOS deployment doesn't have any pod replicas. The DaemonSet couldn't
-allocate any Pod due to security issues. 
+StorageOS DaemonSet doesn't have any pod replicas. The DaemonSet couldn't
+allocate any Pod due to security issues.
 
-### Issue: 
+### Issue:
 ```bash
 [root@master02 standard]# oc get pod
 No resources found.
@@ -17,13 +17,13 @@ Events:
 
 ### Reason:
 
-This OpenShift cluster has security context constraint policies
-enabled that forbid any pod, without the explicitly set policy for the service
-account, to be allocated.
+The OpenShift cluster has security context constraint policies enabled that
+forbid any pod, without an explicitly set policy for the service account, to
+be allocated.
 
 ### Assert:
 
-Check if the StorageOS ServiceAccount can create pods with enough permissions 
+Check if the StorageOS ServiceAccount can create pods with enough permissions
 ```bash
 oc get scc privileged -o yaml # Or custom scc with enough privileges
 (...)
@@ -42,7 +42,7 @@ privileged scc it will be able to create pods.
 ### Solution:
 
 Add the ServiceAccount system:serviceaccount:storageos:storageos to a scc with
-enough privieges. 
+enough privileges.
 
 ```bash
 oc adm policy add-scc-to-user privileged system:serviceaccount:storageos:storageos

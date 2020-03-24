@@ -13,7 +13,7 @@ time="2018-09-24T13:40:20Z" level=info msg="retrying cluster join in 5 seconds..
 ### Reason:
 StorageOS uses a gossip protocol to discover the nodes in the cluster. When
 StorageOS starts, one or more active nodes must be referenced so new nodes can
-query existing ones for the list of members. This error indicates that the node
+query existing nodes for the list of members. This error indicates that the node
 can't connect to any of the nodes in the known list. The known list is defined
 in the `JOIN` variable.
 
@@ -22,9 +22,9 @@ first node in the `JOIN` variable as master, and the rest will try to
 discover from it. In case of that node not starting, the whole cluster will
 remain unable to bootstrap.
 
-Installations of StorageOS on use a DaemonSet, and by default do not schedule
+Installations of StorageOS use a DaemonSet, and by default do not schedule
 StorageOS pods to master nodes, due to the presence of the
-`node-role.kubernetes.io/master:NoSchedule` taint in typical installations. In
+`node-role.kubernetes.io/master:NoSchedule` taint that is typically present. In
 such cases the `JOIN` variable must not contain master nodes or the StorageOS
 cluster will remain unable to start.
 

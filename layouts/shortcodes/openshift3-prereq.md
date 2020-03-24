@@ -22,7 +22,7 @@ using a Custom Resource.
 1. Ensure that your docker installation has mount propagation enabled per our
    [mount propagation prerequisites]({{ ref . "docs/prerequisites/mountpropagation.md"}}).
 
-1. Enable the `MountPropagation` flag by appending feature gates to the api and
+1. Enable the `MountPropagation` flag by appending feature gates to the API and
    controller (you can apply these changes using the Ansible Playbooks)
 
     > Note: If you are using atomic installation rather than origin, the location of

@@ -9,11 +9,11 @@ redirect_from: /docs/install/kubernetes
 > [prerequisites for StorageOS]({{< ref "docs/prerequisites/_index.md" >}}) are
 > satisfied before proceeding.
 
-> StorageOS transparently supports Rancher deployments using CentOS, RHEL,
+> StorageOS transparently supports Rancher deployments on CentOS, RHEL,
 > Debian, Ubuntu or RancherOS (CSI is not supported on RancherOS) and can
-> support other Linux distributions detailed in the [systems supported
+> support other Linux distributions as detailed on the [System Configuration
 > page]({{< ref "docs/prerequisites/systemconfiguration.md" >}}) if the
-> appropriate kernel modules are present.
+> appropriate kernel modules are available.
 
 
 &nbsp;
@@ -142,7 +142,7 @@ now create a Custom Resource that describes the StorageOS cluster.
     #  kvBackend:
     #    address: 'storageos-etcd-client.etcd:2379' # Example address, change for your etcd endpoint
     #    backend: 'etcd'
-      sharedDir: '/var/lib/kubelet/plugins/kubernetes.io~storageos' # Needed when Kubelet as a container
+      sharedDir: '/var/lib/kubelet/plugins/kubernetes.io~storageos' # Needed when Kubelet runs as a container
       resources:
         requests:
           memory: "512Mi"
@@ -154,23 +154,21 @@ now create a Custom Resource that describes the StorageOS cluster.
             - "true"
     ```
 
-    > `spec` parameters available on the [Cluster Operator configuration](
-    > {%link _docs/reference/cluster-operator/configuration.md %}) page.
+    > Additional `spec` parameters are available on the [Cluster Operator
+    > configuration]({%link _docs/reference/cluster-operator/configuration.md %}) page.
 
-    > You can find more examples such as deployments referencing a external etcd kv
-    > store for StorageOS in the [Cluster Operator examples](
-    > {%link _docs/reference/cluster-operator/examples.md %}) page.
+    > You can find more examples such as deployments referencing a external
+    > etcd kv store for StorageOS in the [Cluster Operator examples]({{< ref "docs/reference/cluster-operator/examples.md" >}}) page.
 
 {{% /tab %}}
 {{% tab tabRef="advanced" %}}
 
 # Advanced installation
 
-This installation procedure is available in case of the default method is not
-suited to your requirements. The following procedure requires a higher
-number of actions to fulfil the installation of the StorageOS cluster in
-comparison with the default procedure. There is also a higher number of
-configuration parameters to be tuned.
+This installation procedure is available in case the default method does not
+meet your requirements. The following procedure requires more steps to complete
+in comparison to the default procedure and requires adjustment of more
+installation parameters.
 
 {{% operator-install cmd="kubectl" platform="kubernetes" sched_version="1.17" %}}
 

@@ -14,8 +14,8 @@ storageos-nhq7m   0/3       Init:Err             0          6s
 
 ### Reason:
 This indicates that since the Linux open source SCSI drivers are not enabled,
-StorageOS cannot start.  The StorageOS DaemonSet enables the required kernel
-modules from the host system. If you are seeing these errors it is because that
+StorageOS cannot start. The StorageOS DaemonSet enables the required kernel
+modules on the host system. If you are seeing these errors it is because that
 container couldn't load the modules.
 
 ### Assert

@@ -9,9 +9,9 @@ redirect_from: /docs/install/kubernetes
 > [prerequisites for StorageOS]({{< ref "docs/prerequisites/_index.md" >}}) are
 > satisfied before proceeding._
 
-> Any Kubernetes managed service such as EKS, AKS, GKE, DO or even the DockeEE
+> Any Kubernetes managed service such as EKS, AKS, GKE, DO or DockeEE
 > platform can use the following Kubernetes guide to install StorageOS.
-> **Ensure the use of CSI for them**.
+> **Ensure the use of CSI for these platforms**.
 
 &nbsp;
 

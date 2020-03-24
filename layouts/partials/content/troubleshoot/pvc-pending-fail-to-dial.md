@@ -3,7 +3,7 @@
 A created PVC remains in pending state making pods that need to mount that PVC
 unable to start.
 
-### Issue: 
+### Issue:
 ```bash
 root@node1:~/# kubectl get pvc
 NAME      STATUS        VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
@@ -20,13 +20,13 @@ Events:
 ### Reason:
 For non CSI installations of StorageOS, Kubernetes uses the StorageOS
 API endpoint to communicate. If that communication fails, relevant actions such
-as create or mount a volume can't be transmitted to StorageOS, hence the PVC
+as create or mount volume can't be transmitted to StorageOS, hence the PVC
 will remain in pending state. StorageOS never received the action to perform,
 so it never sent back an acknowledgement.
 
 In this case, the Event message indicates that StorageOS API is not responding,
-implying that StorageOS is not running. For Kubernetes to define
-StorageOS pods ready, the health check must pass.
+implying that StorageOS is not running. For Kubernetes to define StorageOS pods
+ready, the health check must pass.
 
 ### Assert:
 
@@ -43,7 +43,7 @@ storageos-w98f5   0/1       Running   0          1m
 
 If the pods are not READY, the service will not forward traffic to the API they
 serve hence PVC will remain in pending state until StorageOS pods are
-available. 
+available.
 
 > Kubernetes keeps trying to execute the action until it succeeds. If
 > a PVC is created before StorageOS finish starting, the PVC will be created

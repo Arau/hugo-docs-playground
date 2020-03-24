@@ -1,9 +1,9 @@
 ## CSI (Container Storage Interface) Note
 
-CSI is the standard method of communication that enables storage drivers to
-release on their own schedule. This allows storage vendors to upgrade, update,
-and enhance their drivers without the need to update Kubernetes source code, or
-follow Kubernetes release cycles.
+CSI is the standard method of communication that enables storage drivers for
+Kubernetes to release on their own schedule. The CSI standard allows storage
+vendors to upgrade, update, and enhance their drivers without the need to
+update Kubernetes source code, or follow Kubernetes release cycles.
 
 CSI is available from Kubernetes 1.9 alpha. CSI is considered GA from
 Kubernetes 1.13, hence StorageOS recommends the use of CSI. In addition, the

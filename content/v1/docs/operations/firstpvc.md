@@ -3,17 +3,17 @@ linkTitle: First PVC
 title: StorageOS Volume Guide
 ---
 
-Follow the recipes in this page to create your first PVC (Persistent Volume
-Claim) using StorageOS. StorageOS implements dynamic provisioning. The creation
-of a PVC will provision a PV (PersistentVolume) that will be used to persist the
-data of a Pod.
+Follow the recipes on this page to create your first PVC (Persistent Volume
+Claim) using StorageOS. StorageOS implements dynamic provisioning, so the
+creation of a PVC will automatically provision a PV (PersistentVolume) that can
+be used to persist data written by a Pod.
 
 ## Create the PersistentVolumeClaim
 
 1. You can find the basic examples in the StorageOS use-cases repository, in
    the `00-basic` directory.
 
-    ```bash 
+    ```bash
     git clone https://github.com/storageos/use-cases.git storageos-usecases
     cd storageos-usecases/00-basic
     ```
@@ -36,10 +36,10 @@ data of a Pod.
 
     The above PVC will dynamically provision a 5GB volume using the `fast`
     StorageClass. This StorageClass was created during the StorageOS install
-    and causes StorageOS to provision a PersistentVolume.
+    and triggers creation of a PeristentVolume by StorageOS.
 
-    For installations with CSI, you can create multiple StorageClasses to
-    specify default labels.
+    For installations with CSI, you can create multiple StorageClasses in order
+    to specify default labels.
 
     ```yaml
     apiVersion: storage.k8s.io/v1
@@ -53,9 +53,11 @@ data of a Pod.
     provisioner: storageos # Provisioner when using CSI
     ```
 
-    The above StorageClass has the `storageos.com/replicas` label set. This label tells
-    StorageOS to create a replica for the volume that is created. For the sake
-    of keeping this example simple the unreplicated volume will be used.
+    The above StorageClass has the `storageos.com/replicas` label set. This
+    label tells StorageOS to create a volume with a replica. Adding StorageOS
+    feature labels to the StorageClass ensures all volumes created with the
+    StorageClass have the same labels. For simplicities sake this example will
+    use unreplicated volumes.
 
     ```yaml
     apiVersion: v1
@@ -91,10 +93,10 @@ data of a Pod.
     ```
 
     The above PVC has the `storageos.com/replicas` label set. This label tells
-    StorageOS to create a replica for the volume that is created. For the sake
-    of keeping this example simple the unreplicated volume is used.
+    StorageOS to add a replica for the volume that is created. For the sake
+    of keeping this example simple an unreplicated volume will be used.
 
-1.  Move into the examples folder and create a PVC using the PVC definition above. 
+1.  Move into the examples folder and create a PVC using the PVC definition above.
 
     ```bash
     $ # from storageos-usecases/00-basic
@@ -112,7 +114,7 @@ data of a Pod.
     $ kubectl create -f ./pod.yaml
     ```
 
-    The command above creates a Pod that uses the PVC that was created in step 1. 
+    The command above creates a Pod that uses the PVC that was created in step 1.
     ```yaml
     apiVersion: v1
     kind: Pod
@@ -133,13 +135,13 @@ data of a Pod.
             claimName: pvc-1
     ```
 
-    In the Pod definition above the volume v1, which references the PVC created
-    in step 2, is mounted in the pod at /mnt. In this example a debian image is
-    used for the container but any container image with a shell would work for
-    this example.
+    In the Pod definition above volume v1 references the PVC created in step 2,
+    and is mounted in the pod at /mnt. In this example a debian image is used
+    for the container but any container image with a shell would work for this
+    example.
 
 1. Confirm that the pod is up and running
-    ```bash 
+    ```bash
     $ kubectl get pods
     NAME      READY   STATUS    RESTARTS   AGE
     d1        1/1     Running   0          1m
@@ -147,7 +149,7 @@ data of a Pod.
 
 1. Execute a shell inside the container and write some contents to a file
     ```bash
-    $ kubectl exec -it d1 -- bash 
+    $ kubectl exec -it d1 -- bash
     root@d1:/# echo "Hello World!" > /mnt/helloworld
     root@d1:/# cat /mnt/helloworld
     Hello World!

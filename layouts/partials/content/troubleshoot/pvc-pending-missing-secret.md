@@ -29,7 +29,7 @@ StorageClass expects it or that is has been deployed with a different name.
 
 ### Assert:
 
-1. Check the StorageClass parameters to know where the Secret is expected to be found. 
+1. Check the StorageClass parameters to know where the Secret is expected to be found.
 
     ```bash
     kubectl get storageclass fast -o yaml
@@ -53,7 +53,7 @@ StorageClass expects it or that is has been deployed with a different name.
     reclaimPolicy: Delete
     ```
 
-    > Note that the parameters specify `adminSecretName` and `adminSecretNamespace`. 
+    > Note that the parameters specify `adminSecretName` and `adminSecretNamespace`.
 
 1. Check if the secret exists according to those parameters
     ```bash
@@ -63,7 +63,7 @@ StorageClass expects it or that is has been deployed with a different name.
     ```
 
     If no resources are found, it is clear that the Secret doesn't exist or it is not deployed in
-    the right location. 
+    the right location.
 
 ### Solution:
 Deploy StorageOS following the [installation procedures](
