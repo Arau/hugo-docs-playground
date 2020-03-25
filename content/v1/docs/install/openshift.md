@@ -12,7 +12,11 @@ weight: 20
 
 ## Manual install
 
-{{% operator-install cmd="oc" platform="openshift" sched_version="4.2" %}}
+{{% operator-header %}}
+{{% operator-install cmd="oc" %}}
+{{% operator-secret %}}
+{{% operator-cr cmd="oc" sched_version="4" platforms="openshift" %}}
+{{% operator-selinux sched_version="4" %}}
 
 {{% /tab %}}
 {{% tab tabRef="oc-311" %}}
@@ -23,7 +27,10 @@ weight: 20
 
 ## Install 
 
-{{% operator-install cmd="oc" platform="openshift" sched_version="3.11" %}}
+{{% operator-header %}}
+{{% operator-install cmd="oc" %}}
+{{% operator-secret %}}
+{{% operator-cr cmd="oc" sched_version="3.11" platforms="openshift" %}}
 
 {{% /tab %}}
 {{% tab tabRef="oc-39" %}}
@@ -32,8 +39,12 @@ weight: 20
 
 {{% openshift3-prereq cmd="oc" platform="openshift" sched_version="3.9" %}}
 
-## Install 
-{{% operator-install cmd="oc" platform="openshift" sched_version="3.9" %}}
+## Install
+
+{{% operator-header %}}
+{{% operator-install cmd="oc" %}}
+{{% operator-secret %}}
+{{% operator-cr cmd="oc" sched_version="3.9" platforms="openshift" %}}
 
 {{% /tab %}}
 {{< /tabs >}}

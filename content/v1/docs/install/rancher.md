@@ -170,7 +170,10 @@ meet your requirements. The following procedure requires more steps to complete
 in comparison to the default procedure and requires adjustment of more
 installation parameters.
 
-{{% operator-install cmd="kubectl" platform="kubernetes" sched_version="1.17" %}}
+{{% operator-header %}}
+{{% operator-install cmd="kubectl" %}}
+{{% operator-secret %}}
+{{% operator-cr cmd="kubectl" sched_version="1.17" platforms="rancher" %}}
 
 {{% /tab %}}
 {{< /tabs >}}

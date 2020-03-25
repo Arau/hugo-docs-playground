@@ -1,10 +1,14 @@
 {{ $cmd := .Get "cmd"}}
-{{ $platform := .Get "platform" }}
+{{ $platforms := split ( .Get "platforms" ) "," }}
 {{ $sched_version := .Get "sched_version" }}
 
 ## 3 Trigger a StorageOS installation
 
-{{ partial "content/operator-cr-tabs.html" . }}
+{{ if eq (len $platforms) 1 }}
+    {{- partial "content/customresource.md" (dict "params" $.Params "platform" ( index  $platforms 0 )) -}}
+{{ else }}
+    {{ partial "content/operator-cr-tabs.html" . }}
+{{ end }}
 
 > Additional `spec` parameters are available on the [Cluster Operator
 > configuration]( {{ ref . "docs/reference/cluster-operator/configuration.md" }})

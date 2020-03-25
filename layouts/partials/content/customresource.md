@@ -1,5 +1,5 @@
-{{- $cmd := .Params.cmd -}}
-{{- $sched_version := .Params.sched_version -}}
+{{- $cmd := .params.cmd -}}
+{{- $sched_version := .params.sched_version -}}
 {{- $platform := .platform -}}
 
 This is a Cluster Definition example.
@@ -16,7 +16,7 @@ spec:
   k8sDistro: "{{ $platform }}"
   images:
     nodeContainer: "storageos/node:{{ site.Params.latest_node_version }}" # StorageOS version
-{{- if and (gt $sched_version 1.12) (lt $sched_version 3.0) }}
+{{- if not (in "1.12 3.9 3.11" $sched_version) }}
   csi:
     enable: true
     deploymentStrategy: deployment
